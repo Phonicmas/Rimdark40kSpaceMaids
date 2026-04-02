@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Space Maids icon used for decorating the decorative flag -->
+    <Genes40k.FlagIconDef>
+        <defName>BEWH_FlagIconSpaceMaids</defName>
+        <label>Space Maids</label>
+        <description>Chapter heraldry of the Black Templars.</description>
+        <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Legion_IISpaceMaids</iconPath>
+        <sortOrder>5499</sortOrder>
+    </Genes40k.FlagIconDef>
+
+</Defs>

@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- Space Maids -->
+    <!-- Apron + 2 additional masks -->
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_Apron</defName>
+        <label>Apron</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/Armor/BEWH_Deco_Apron_icon</iconPath> 
+        <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_Apron</drawnTextureIconPath>
+        <drawSize>(0.5, 0.5)</drawSize>
+        <sortOrder>2.13</sortOrder>
+        <defaultShowRotation>
+            <li>North</li>
+            <li>South</li>
+            <li>West</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+            <li>BEWH_MkXPowerArmor</li>
+        </appliesTo>
+        <drawData>
+            <dataNorth>
+                <layer>89</layer>
+                <offset>(0, 0, -0.51)</offset>
+            </dataNorth>
+            <dataSouth>
+                <layer>44</layer>
+                <offset>(0, 0, -0.5)</offset>
+            </dataSouth>
+            <dataEast>
+                <layer>44</layer>
+                <offset>(-0.175, 0, -0.51)</offset>
+            </dataEast>
+            <dataWest>
+                <layer>44</layer>
+                <offset>(0.175, 0, -0.51)</offset>
+            </dataWest>
+        </drawData>
+        <shaderType>CutoutComplex</shaderType>
+        <availablePresets>
+            <li>BEWH_DecoPalettePink_1</li>
+            <li>BEWH_DecoPalettePink_2</li>
+            <li>BEWH_DecoPaletteGoldPastel</li>
+        </availablePresets>
+        <colourable>true</colourable>
+        <useMask>true</useMask>
+        <defaultColour>(255, 237, 251)</defaultColour>
+        <defaultColourTwo>(202, 90, 132)</defaultColourTwo>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.MaskDef ParentName="BEWH_MaskDef_ExtraDecoration">
+        <defName>BEWH_ApronMask_2</defName>
+        <label>Heart</label>
+        <description>???</description>
+        <maskPath>Things/Decorations/Armor/Common/BEWH_Deco_ApronHeart_mask</maskPath>
+        <appliesTo>
+            <li>BEWH_Deco_Apron</li>
+        </appliesTo>
+        <shaderType>BEWH_CutoutThreeColor</shaderType>
+        <colorAmount>2</colorAmount>
+        <sortOrder>2</sortOrder>
+    </Core40k.MaskDef>
+
+    <Core40k.MaskDef ParentName="BEWH_MaskDef_ExtraDecoration">
+        <defName>BEWH_ApronMask_3</defName>
+        <label>Star</label>
+        <description>???</description>
+        <maskPath>Things/Decorations/Armor/Common/BEWH_Deco_ApronStar_mask</maskPath>
+        <appliesTo>
+            <li>BEWH_Deco_Apron</li>
+        </appliesTo>
+        <shaderType>BEWH_CutoutThreeColor</shaderType>
+        <colorAmount>2</colorAmount>
+        <sortOrder>3</sortOrder>
+    </Core40k.MaskDef>
+
+    <!-- Skirt -->
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_Skirt</defName>
+        <label>Skirt</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/Armor/BEWH_Deco_Skirt_icon</iconPath> 
+        <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_Skirt</drawnTextureIconPath>
+        <drawSize>(0.5, 0.5)</drawSize>
+        <sortOrder>2.14</sortOrder>
+        <defaultShowRotation>
+            <li>North</li>
+            <li>South</li>
+            <li>West</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+            <li>BEWH_MkXPowerArmor</li>
+        </appliesTo>
+        <drawData>
+            <dataNorth>
+                <layer>88</layer>
+                <offset>(0, 0, -0.51)</offset>
+            </dataNorth>
+            <dataSouth>
+                <layer>43</layer>
+                <offset>(0, 0, -0.5)</offset>
+            </dataSouth>
+            <dataEast>
+                <layer>39</layer>
+                <offset>(-0.175, 0, -0.51)</offset>
+            </dataEast>
+            <dataWest>
+                <layer>39</layer>
+                <offset>(0.175, 0, -0.51)</offset>
+            </dataWest>
+        </drawData>
+        <shaderType>CutoutComplex</shaderType>
+        <availablePresets>
+            <li>BEWH_DecoPalettePink_1</li>
+            <li>BEWH_DecoPalettePink_2</li>
+            <li>BEWH_DecoPaletteGoldPastel</li>
+        </availablePresets>
+        <colourable>true</colourable>
+        <useMask>true</useMask>
+        <defaultColour>(249, 132, 184)</defaultColour>
+    </Core40k.ExtraDecorationDef>
+
+    <!-- Belt Bow -->
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_BeltBow_Common</defName>
+        <label>Belt bow</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/Armor/BEWH_Deco_BeltBow_icon</iconPath> 
+        <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_BeltBow</drawnTextureIconPath>
+        <drawSize>(0.25, 0.25)</drawSize>
+        <sortOrder>2.15</sortOrder>
+        <defaultShowRotation>
+            <li>South</li>
+            <li>West</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+            <li>BEWH_MkXPowerArmor</li>
+        </appliesTo>
+        <drawData>
+            <!-- <dataNorth>
+                <layer>89</layer>
+                <offset>(0, 0, -0.51)</offset>
+            </dataNorth> -->
+            <dataSouth>
+                <layer>45</layer>
+                <offset>(0, 0, -0.57)</offset>
+            </dataSouth>
+            <dataEast>
+                <layer>45</layer>
+                <offset>(0.1, 0, -0.55)</offset>
+            </dataEast>
+            <dataWest>
+                <layer>45</layer>
+                <offset>(-0.1, 0, -0.55)</offset>
+            </dataWest>
+        </drawData>
+        <shaderType>CutoutComplex</shaderType>
+        <availablePresets>
+            <li>BEWH_DecoPalettePink_1</li>
+            <li>BEWH_DecoPalettePink_2</li>
+            <li>BEWH_DecoPaletteGoldPastel</li>
+        </availablePresets>
+        <colourable>true</colourable>
+        <useMask>true</useMask>
+        <colorAmount>2</colorAmount>
+        <defaultColour>(202, 90, 132)</defaultColour>
+        <defaultColourTwo>(252, 196, 139)</defaultColourTwo>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_BeltBow_Chaplain</defName>
+        <label>Belt bow</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/Armor/BEWH_Deco_BeltBow_icon</iconPath> 
+        <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_BeltBow</drawnTextureIconPath>
+        <drawSize>(0.25, 0.25)</drawSize>
+        <sortOrder>2.15</sortOrder>
+        <defaultShowRotation>
+            <li>South</li>
+            <li>West</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkXPowerArmorChaplain</li>
+        </appliesTo>
+        <drawData>
+            <!-- <dataNorth>
+                <layer>89</layer>
+                <offset>(0, 0, -0.51)</offset>
+            </dataNorth> -->
+            <dataSouth>
+                <layer>45</layer>
+                <offset>(0, 0, -0.57)</offset>
+            </dataSouth>
+            <dataEast>
+                <layer>41</layer>
+                <offset>(0.05, 0, -0.56)</offset>
+            </dataEast>
+            <dataWest>
+                <layer>41</layer>
+                <offset>(-0.05, 0, -0.56)</offset>
+            </dataWest>
+        </drawData>
+        <shaderType>CutoutComplex</shaderType>
+        <availablePresets>
+            <li>BEWH_DecoPaletteFabricBeige</li>
+            <li>BEWH_DecoPaletteFabricRed</li>
+            <li>BEWH_DecoPaletteApothecaryRed</li>
+            <li>BEWH_DecoPaletteIFBlack</li>
+        </availablePresets>
+        <colourable>true</colourable>
+        <useMask>true</useMask>
+        <colorAmount>2</colorAmount>
+        <defaultColour>(202, 90, 132)</defaultColour>
+        <defaultColourTwo>(252, 196, 139)</defaultColourTwo>
+    </Core40k.ExtraDecorationDef>
+
+    <!-- Backpack Bow -->
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_BackpackBow</defName>
+        <label>Backpack bow</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/Armor/BEWH_Deco_BPackBow_icon</iconPath> 
+        <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_BPackBow</drawnTextureIconPath>
+        <drawSize>(0.5, 0.5)</drawSize>
+        <sortOrder>2.15</sortOrder>
+        <defaultShowRotation>
+            <!-- <li>South</li>
+            <li>West</li>
+            <li>East</li> -->
+            <li>North</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+            <li>BEWH_MkXPowerArmor</li>
+            <li>BEWH_MkXPowerArmorChaplain</li>
+        </appliesTo>
+        <drawData>
+            <dataNorth>
+                <layer>100</layer>
+                <offset>(0, 1, 0)</offset>
+            </dataNorth>
+            <!-- <dataSouth>
+                <layer>45</layer>
+                <offset>(0, 0, -0.5)</offset>
+            </dataSouth>
+            <dataEast>
+                <layer>40</layer>
+                <offset>(-0.175, 0, -0.51)</offset>
+            </dataEast>
+            <dataWest>
+                <layer>40</layer>
+                <offset>(0.175, 0, -0.51)</offset>
+            </dataWest> -->
+        </drawData>
+        <shaderType>CutoutComplex</shaderType>
+        <availablePresets>
+            <li>BEWH_DecoPalettePink_1</li>
+            <li>BEWH_DecoPalettePink_2</li>
+            <li>BEWH_DecoPaletteGoldPastel</li>
+        </availablePresets>
+        <colourable>true</colourable>
+        <useMask>true</useMask>
+        <defaultColour>(255, 237, 251)</defaultColour>
+    </Core40k.ExtraDecorationDef>
+
+    <!-- Chest Neko -->
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_ChestNeko</defName>
+        <label>Nekuilla</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/Armor/BEWH_Deco_ChestNeko_icon</iconPath> 
+        <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_ChestNeko</drawnTextureIconPath>
+        <drawSize>(0.25, 0.25)</drawSize>
+        <sortOrder>2.15</sortOrder>
+        <defaultShowRotation>
+            <li>South</li>
+            <li>West</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+            <li>BEWH_MkXPowerArmor</li>
+        </appliesTo>
+        <drawData>
+            <dataSouth>
+                <layer>43</layer>
+                <offset>(0, 0, -0.087)</offset>
+            </dataSouth>
+            <dataEast>
+                <layer>43</layer>
+                <offset>(0.265, 0, -0.087)</offset>
+            </dataEast>
+            <dataWest>
+                <layer>43</layer>
+                <offset>(-0.265, 0, -0.087)</offset>
+            </dataWest>
+        </drawData>
+        <shaderType>Cutout</shaderType>
+        <availablePresets>
+            <li>BEWH_DecoPalettePink_1</li>
+            <li>BEWH_DecoPalettePink_2</li>
+            <li>BEWH_DecoPaletteGoldPastel</li>
+        </availablePresets>
+        <colourable>true</colourable>
+        <defaultColour>(252, 196, 139)</defaultColour>
+    </Core40k.ExtraDecorationDef>
+
+    <!-- Pauldron Bows 1 -->
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_PauldronBows_1</defName>
+        <label>Pauldron bows</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/Armor/BEWH_Deco_PauldronBows1_icon</iconPath> 
+        <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_PauldronBows1</drawnTextureIconPath>
+        <drawSize>(1, 1)</drawSize>
+        <sortOrder>2.16</sortOrder>
+        <defaultShowRotation>
+            <li>South</li>
+            <li>West</li>
+            <li>East</li>
+            <li>North</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+            <li>BEWH_MkXPowerArmor</li>
+            <li>BEWH_MkXPowerArmorChaplain</li>
+        </appliesTo>
+        <drawData>
+            <dataNorth>
+                <layer>100</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>86</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>86</layer>
+            </dataEast>
+            <dataWest>
+                <layer>86</layer>
+            </dataWest>
+        </drawData>
+        <shaderType>Cutout</shaderType>
+        <availablePresets>
+            <li>BEWH_DecoPalettePink_1</li>
+            <li>BEWH_DecoPalettePink_2</li>
+            <li>BEWH_DecoPaletteGoldPastel</li>
+        </availablePresets>
+        <colourable>true</colourable>
+        <defaultColour>(202, 90, 132)</defaultColour>
+    </Core40k.ExtraDecorationDef>
+
+    <!-- Pauldron Bows 2 -->
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_PauldronBows_2</defName>
+        <label>Cat bells</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/Armor/BEWH_Deco_PauldronBows2_icon</iconPath> 
+        <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_PauldronBows2</drawnTextureIconPath>
+        <drawSize>(1, 1)</drawSize>
+        <sortOrder>2.17</sortOrder>
+        <defaultShowRotation>
+            <li>South</li>
+            <li>West</li>
+            <li>East</li>
+            <li>North</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+            <li>BEWH_MkXPowerArmor</li>
+            <li>BEWH_MkXPowerArmorChaplain</li>
+        </appliesTo>
+        <drawData>
+            <dataNorth>
+                <layer>100</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>86</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>86</layer>
+            </dataEast>
+            <dataWest>
+                <layer>86</layer>
+            </dataWest>
+        </drawData>
+        <shaderType>CutoutComplex</shaderType>
+        <availablePresets>
+            <li>BEWH_DecoPalettePink_1</li>
+            <li>BEWH_DecoPalettePink_2</li>
+            <li>BEWH_DecoPaletteGoldPastel</li>
+        </availablePresets>
+        <colourable>true</colourable>
+        <useMask>true</useMask>
+        <defaultColour>(255, 237, 251)</defaultColour>
+    </Core40k.ExtraDecorationDef>
+
+    <!-- Pauldron Ruffles -->
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_Deco_PauldronRuffles</defName>
+        <label>Pauldron ruffles</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/Armor/BEWH_Deco_PauldronRuffles_icon</iconPath> 
+        <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_PauldronRuffles</drawnTextureIconPath>
+        <drawSize>(1, 1)</drawSize>
+        <sortOrder>2.18</sortOrder>
+        <defaultShowRotation>
+            <li>South</li>
+            <li>West</li>
+            <li>East</li>
+            <li>North</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmor</li>
+            <li>BEWH_MkXPowerArmor</li>
+            <li>BEWH_MkXPowerArmorChaplain</li>
+        </appliesTo>
+        <drawData>
+            <dataSouth>
+                <layer>43</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>80</layer>
+            </dataEast>
+            <dataWest>
+                <layer>80</layer>
+            </dataWest>
+            <dataNorth>
+                <layer>95</layer>
+            </dataNorth>
+        </drawData>
+        <shaderType>Cutout</shaderType>
+        <availablePresets>
+            <li>BEWH_DecoPalettePink_1</li>
+            <li>BEWH_DecoPalettePink_2</li>
+            <li>BEWH_DecoPaletteGoldPastel</li>
+        </availablePresets>
+        <colourable>true</colourable>
+        <defaultColour>(255, 237, 251)</defaultColour>
+    </Core40k.ExtraDecorationDef>
+
+</Defs>

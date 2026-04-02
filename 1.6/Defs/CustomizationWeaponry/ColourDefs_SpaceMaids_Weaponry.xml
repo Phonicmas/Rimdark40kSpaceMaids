@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Space Maids Weapons -->
+    <Genes40k.ChapterColourDef>
+        <defName>BEWH_WeaponColourSpaceMaids</defName>
+        <appliesTo>
+            <li>BEWH_Narthecium</li>
+            <li>BEWH_Reductor</li>
+            <li>BEWH_AstartesBolter</li>
+            <li>BEWH_AstartesChainsword</li>
+            <li>BEWH_AstartesPowerSword</li>
+        </appliesTo>
+        <appliesToKind>Weapon</appliesToKind>
+        <colorAmount>3</colorAmount>
+        <label>Space Maids</label>
+        <primaryColour>(229, 100, 157)</primaryColour>
+        <secondaryColour>(251, 180, 108)</secondaryColour>
+        <tertiaryColour>(253, 213, 226)</tertiaryColour>
+    </Genes40k.ChapterColourDef>
+
+</Defs>

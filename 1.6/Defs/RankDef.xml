@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- Battle-Sibling -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_SpaceMaidsBattleSibling</defName>
+        <label>Battle Sibling</label>
+        <description>The backbone of the Space Maids legion. Equally trained in the arts of war and the arts of hospitality, they are never without a weapon in one hand and something nice to eat in the other.\n\nThe enemy did not expect the tray. They never do.</description>
+        <rankIconPath>UI/Ranks/BEWH_Server</rankIconPath>
+
+        <requiredSkills>
+            <Shooting>7</Shooting>
+            <Melee>7</Melee>
+        </requiredSkills>
+        <requiredGenesAll>
+            <li>BEWH_BlackCarapace</li>
+            <li>BEWH_ChapterSpaceMaids</li>
+        </requiredGenesAll>
+
+        <statOffsets>
+            <MoveSpeed>0.02</MoveSpeed>
+            <WorkSpeedGlobal>0.02</WorkSpeedGlobal>
+            <BEWH_Cuteness>5</BEWH_Cuteness>
+        </statOffsets>
+
+        <rankTier>0</rankTier>
+        <unlocksRankIcon>BEWH_RankIcon_MaidsBattleSibling</unlocksRankIcon>
+    </Genes40k.ChapterRankDef>
+
+    <!-- Cafe Cutie -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_SpaceMaidsCafeCutie</defName>
+        <label>Cafe Cutie</label>
+        <description>"Mirror, mirror on the wall, who's the cutest of them all?"\n\nHand-picked for their inner or outer beauty, Cafe Cutie's sheer presence softens hearts, improves negotiations for the next grocery supply, and turns the hearts of heretics to good.\n\nNekona did not engineer this. Some things are simply a gift.</description>
+        <rankIconPath>UI/Ranks/BEWH_CafeCutie</rankIconPath>
+
+        <!-- Limit amount -->
+        <colonyLimitOfRank>(1, 0)</colonyLimitOfRank>
+        
+        <requiredSkills>
+            <Social>6</Social>
+        </requiredSkills>
+
+        <requiredTraitsOneAmong>
+            <Kind />
+            <Joyous MayRequire="Ludeon.RimWorld.Anomaly"/>
+            <Beauty>1</Beauty>
+            <Beauty>2</Beauty>
+            <Gay />
+        </requiredTraitsOneAmong>
+
+        <statOffsets>
+            <NegotiationAbility>0.25 </NegotiationAbility>
+            <TradePriceImprovement>0.15</TradePriceImprovement>
+            <SocialImpact>0.5</SocialImpact>
+            <SocialIdeoSpreadFrequencyFactor MayRequire="Ludeon.RimWorld.Ideology">0.5</SocialIdeoSpreadFrequencyFactor>
+            <ConversionPower MayRequire="Ludeon.RimWorld.Ideology">0.5</ConversionPower>
+            <BEWH_Cuteness>200</BEWH_Cuteness>
+        </statOffsets>
+
+        <rankTier>3</rankTier>
+        <unlocksRankIcon>BEWH_RankIcon_MaidsCafeCutie</unlocksRankIcon>
+    </Genes40k.ChapterRankDef>
+
+    <!-- Housekeeper -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_SpaceMaidsHousekeeper</defName>
+        <label>Housekeeper</label>
+        <description>The Housekeeper leaves no mess unaddressed and no customer unattended. They move with quiet efficiency through chaos and clutter alike. Tidying, patching, and pressing forward without breaking stride.</description>
+        <rankIconPath>UI/Ranks/BEWH_HouseKeeper</rankIconPath>
+
+        <statOffsets>
+            <MedicalTendQuality>0.12</MedicalTendQuality>
+            <MedicalTendSpeed>0.3</MedicalTendSpeed>
+            <MoveSpeed>0.05</MoveSpeed>
+            <WorkSpeedGlobal>0.04</WorkSpeedGlobal>
+            <BEWH_Cuteness>10</BEWH_Cuteness>
+        </statOffsets>
+
+        <rankTier>2</rankTier>
+        <unlocksRankIcon>BEWH_RankIcon_MaidsHousekeeper</unlocksRankIcon>
+    </Genes40k.ChapterRankDef>
+
+    <!-- Sous-Chef -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_SpaceMaidsSousChef</defName>
+        <label>Sous-Chef</label>
+        <description>The backbone of culinary warfare. A Sous-Chef cooks, and cooks well, ensuring that no battle-sibling fights on an empty stomach.</description>
+        <rankIconPath>UI/Ranks/BEWH_SousChef</rankIconPath>
+
+        <statOffsets>
+            <CookSpeed>0.65</CookSpeed>
+            <FoodPoisonChance>-0.3</FoodPoisonChance>
+            <ButcheryFleshSpeed>1.5</ButcheryFleshSpeed>
+            <ButcheryFleshEfficiency>0.2</ButcheryFleshEfficiency>
+            <WorkSpeedGlobal>0.04</WorkSpeedGlobal>
+            <BEWH_Cuteness>10</BEWH_Cuteness>
+        </statOffsets>
+
+        <rankTier>2</rankTier>
+        <unlocksRankIcon>BEWH_RankIcon_MaidsSousChef</unlocksRankIcon>
+    </Genes40k.ChapterRankDef>
+
+    <!-- Manager -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_SpaceMaidsManager</defName>
+        <label>Manager</label>
+        <description>The Manager sees all, organizes all, and ensures that everything runs exactly as Nekona intended. They keep the team sharp, the atmosphere warm, and the customers thoroughly welcomed.</description>
+        <rankIconPath>UI/Ranks/BEWH_Manager</rankIconPath>
+
+        <statOffsets>
+            <NegotiationAbility>0.2</NegotiationAbility>
+            <TradePriceImprovement>0.1</TradePriceImprovement>
+            <SocialImpact>1</SocialImpact>
+            <SocialIdeoSpreadFrequencyFactor MayRequire="Ludeon.RimWorld.Ideology">0.3</SocialIdeoSpreadFrequencyFactor>
+            <BEWH_Cuteness>25</BEWH_Cuteness>
+        </statOffsets>
+
+        <rankTier>3</rankTier>
+        <unlocksRankIcon>BEWH_RankIcon_Manager</unlocksRankIcon>
+    </Genes40k.ChapterRankDef>
+
+    <!-- Cafe Master -->
+    <Genes40k.ChapterRankDef>
+        <defName>BEWH_SpaceMaidsCafeMaster</defName>
+        <label>Cafe Master</label>
+        <description>The highest rank of the chapter. A supreme commander of the Space Maids, a master-strategist and a master-chef.</description>
+        <rankIconPath>UI/Ranks/BEWH_CafeMaster</rankIconPath>
+
+        <requiredSkills>
+            <Cooking>8</Cooking>
+        </requiredSkills>
+
+        <statOffsets>
+            <CookSpeed>0.3</CookSpeed>
+            <WorkSpeedGlobal>0.5</WorkSpeedGlobal>
+            <BEWH_Cuteness>50</BEWH_Cuteness>
+        </statOffsets>
+
+        <givesVFEAbilities>
+            <li>BEWH_SpaceMaidsDropPod</li>
+        </givesVFEAbilities>
+
+        <rankTier>6</rankTier>
+        <unlocksRankIcon>BEWH_RankIcon_CafeMaster</unlocksRankIcon>
+    </Genes40k.ChapterRankDef>
+
+</Defs>

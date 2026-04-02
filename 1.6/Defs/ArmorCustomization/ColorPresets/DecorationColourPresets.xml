@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Maid Palette Standard -->
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPalettePink_1</defName>
+        <label>Audacious Pink</label>
+        <colour>(227, 72, 141)</colour> <!-- rgb(227, 72, 141) -->
+        <colourTwo>(252, 196, 139)</colourTwo> <!-- rgb(252, 196, 139) -->
+        <colourThree>(255, 237, 251)</colourThree> <!-- rgb(255, 237, 251) -->
+    </Core40k.DecorationColourPresetDef>
+
+    <!-- Maid Light Pink 3 channels -->
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPalettePink_2</defName>
+        <label>Delicate Rose</label>
+        <colour>(255, 237, 251)</colour>  <!-- rgb(255, 237, 251) -->
+        <colourTwo>(255, 237, 251)</colourTwo>
+        <colourThree>(255, 237, 251)</colourThree>
+    </Core40k.DecorationColourPresetDef>
+    
+    <!-- Maid Pastel Gold -->
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPaletteGoldPastel</defName>
+        <label>Pastel Gold</label>
+        <colour>(252, 196, 139)</colour>
+        <colourTwo>(252, 196, 139)</colourTwo>
+        <colourThree>(252, 196, 139)</colourThree>
+    </Core40k.DecorationColourPresetDef>
+
+    <!-- Maid Lense Glow -->
+    <Core40k.DecorationColourPresetDef>
+        <defName>BEWH_DecoPaletteLenseGlowPink</defName>
+        <label>Strawberry Milkshake</label>
+        <colour>(255, 183, 215)</colour>
+    </Core40k.DecorationColourPresetDef>
+</Defs>

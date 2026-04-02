@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThoughtDef>
+        <defName>BEWH_CutenessOpinion</defName>
+        <thoughtClass>Thought_SituationalSocial</thoughtClass>
+        <workerClass>NyanDark40k.ThoughtWorker_Cuteness</workerClass>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <label>kinda cute</label>
+                <baseOpinionOffset>5</baseOpinionOffset>
+            </li>
+            <li>
+                <label>aww</label>
+                <baseOpinionOffset>20</baseOpinionOffset>
+            </li>
+            <li>
+                <label>cutie</label>
+                <baseOpinionOffset>35</baseOpinionOffset>
+            </li>
+            <li>
+                <label>super cutie</label>
+                <baseOpinionOffset>50</baseOpinionOffset>
+            </li>
+            <li>
+                <label>KAWAI!</label>
+                <baseOpinionOffset>100</baseOpinionOffset>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>BEWH_ServitileThought</defName>
+        <workerClass>NyanDark40k.ThoughtWorker_Servitile</workerClass>
+        <validWhileDespawned>true</validWhileDespawned>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <requiredGenes>
+            <li>BEWH_ChapterSpaceMaids</li>
+        </requiredGenes>
+        <stages>
+            <li>
+                <label>Unserved</label>
+                <description>There is no one to attend to. Nothing to clean, no one to feed, no purpose to fulfill. This is fine. Everything is fine.</description>
+                <baseMoodEffect>-6</baseMoodEffect>
+            </li>
+            <li>
+                <label>Idle</label>
+                <description>The urge to serve goes unanswered. It is becoming difficult to focus on anything else.</description>
+                <baseMoodEffect>-3</baseMoodEffect>
+            </li>
+            <li>
+                <label>Serving</label>
+                <description>There are tasks to be done and people to attend to. Good.</description>
+                <baseMoodEffect>0</baseMoodEffect>
+            </li>
+            <li>
+                <label>Well-serving</label>
+                <description>Meals have been served, spaces tended to, and others looked after. Nekona would be pleased.</description>
+                <baseMoodEffect>3</baseMoodEffect>
+            </li>
+            <li>
+                <label>In Full Service</label>
+                <description>Every need has been met, every surface cleaned, every plate delivered with care. This is what it means to be a Space Maid. Perfect.</description>
+                <baseMoodEffect>6</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>BEWH_NekonaHandFed</defName>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <thoughtClass>NyanDark40k.ThoughtNekonaFeed</thoughtClass>
+        <durationDays>0.1</durationDays>
+        <stages>
+            <li>
+                <label>Pure bliss</label>
+                <description>I was hand-fed the greatest food from the softest paws while listening to the kindest voice. Pure. Bliss.</description>
+                <baseMoodEffect>20</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+</Defs>

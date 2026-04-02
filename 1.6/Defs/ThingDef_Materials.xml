@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- CHAPTER MATERIAL -->
+    <ThingDef ParentName="BEWH_ChapterGeneticMaterial">
+        <defName>BEWH_ChapterMaterialSpaceMaids</defName>
+        <label>chapter material - Space Maids</label>
+        <description>A specialized container designed to store and preserve the sacred genetic data of a Space Maids legion. Legion material develops within a Space Marine's body and can be harvested once fully developed, retrieved from the fallen, or acquired from a trader.</description>
+        <graphicData>
+            <texPath>Things/ChapterMaterial/BEWH_ChapterMaterial_II</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <descriptionHyperlinks>
+            <GeneDef>BEWH_ChapterSpaceMaids</GeneDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_ChapterMaterial">
+                <orderInt>2</orderInt>
+                <shownMaterialName>Space Maids</shownMaterialName>
+            </li>
+            <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+                <addedGene>BEWH_ChapterSpaceMaids</addedGene>
+                <newGeneseedVialTexture>Things/GeneseedVial/BEWH_GeneseedVial_SpaceMaid</newGeneseedVialTexture>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <!-- PRIMARCH MATERIAL -->
+    <ThingDef ParentName="BEWH_PrimarchGeneticMaterial">
+        <defName>BEWH_PrimarchMaterialSpaceMaids</defName>
+        <label>primarch material II - Nekona</label>
+        <description>A specialized container that contains and preserves the sacred genetic data of Nekona, the Second Primarch. This relic ensures the purity and potency of Nekona's divine genetic heritage, enabling the creation of the Emperor's daughter.</description>
+        <graphicData>
+            <texPath>Things/PrimarchMaterial/BEWH_PrimarchMaterial_II</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <descriptionHyperlinks>
+            <GeneDef>BEWH_PrimarchSpecificGeneSpaceMaids</GeneDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+                <orderInt>2</orderInt>
+                <shownMaterialName>Nekona</shownMaterialName>
+            </li>
+            <li Class="Genes40k.DefModExtension_GeneFromMaterial">
+                <addedGene>BEWH_PrimarchSpecificGeneSpaceMaids</addedGene>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+</Defs>

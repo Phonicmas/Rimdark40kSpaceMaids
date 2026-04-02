@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Boltgun Cookie -->
+    <ThingDef ParentName="MealCooked">
+        <defName>BEWH_BoltgunCookie</defName>
+        <label>boltgun cookie</label>
+        <description>A chunky, lovingly hand-shaped chocolate chip cookie in the form of the Imperium's most beloved tool of negotiation. Each chocolate chip represents a heretic that didn't run fast enough. It is known for sure that the phrase "Eat boltgun!" comes from the name of this cookie. Nekona was unable to erase all the references to her legion after all.</description>
+        <descriptionHyperlinks>
+            <HediffDef>BEWH_BoltgunCookieHediff</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Things/Food/Cookie</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <statBases>
+            <WorkToMake>350</WorkToMake>
+            <MarketValue>7</MarketValue>
+            <Mass>0.075</Mass>
+            <DeteriorationRate>8</DeteriorationRate>
+            <Nutrition>1</Nutrition>
+        </statBases>
+        <techLevel>Spacer</techLevel>
+        <ingestible>
+            <foodType>Processed</foodType>
+            <joyKind>Gluttonous</joyKind>
+            <joy>0.1</joy>
+            <baseIngestTicks>350</baseIngestTicks>
+			<maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+            <ingestSound>Meal_Eat</ingestSound>
+            <ingestHoldUsesTable>true</ingestHoldUsesTable>
+            <ingestCommandString>Eat {0}</ingestCommandString>
+            <ingestReportString>Is eating {0}.</ingestReportString>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>BEWH_BoltgunCookieHediff</hediffDef>
+                    <severity>1</severity>
+                </li>
+            </outcomeDoers>
+            <preferability>MealSimple</preferability>
+        </ingestible>
+        <recipeMaker>
+            <recipeUsers>
+                <li>ElectricStove</li>
+                <li>FueledStove</li>
+                <li>BEWH_SpaceMaidsDropPodBuilding</li>
+            </recipeUsers>
+        </recipeMaker>
+        <costList>
+            <Chocolate>2</Chocolate>            <!-- idk what it should be made from? ~I have no idea either xD -->
+            <Milk>3</Milk>
+            <Yayo>1</Yayo>
+        </costList>
+    </ThingDef>
+
+
+    <HediffDef>
+        <defName>BEWH_BoltgunCookieHediff</defName>
+        <label>Ate Boltgun!</label>
+        <labelNoun>Ate Boltgun!</labelNoun>
+        <description>Something about consuming a dough effigy of the Imperium's favorite conversation-ender has had a remarkable effect on this person's body. Faster. Sharper. Somehow more trigger-happy than before. Nutritionists are baffled. The Ecclesiarchy is taking notes.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-1.8</severityPerDay>
+                <showHoursToRecover>true</showHoursToRecover>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>0.12</offset>
+                    </li>
+                </capMods>
+                <statOffsets>
+                    <ShootingAccuracyPawn>6</ShootingAccuracyPawn>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThoughtDef>
+        <defName>BEWH_BoltgunCookieThought</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>BEWH_BoltgunCookieHediff</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+            <stages>
+                <li>
+                    <label>tasted victory</label>
+                    <description>That cookie tasted like winning! And yayo. Mostly winning.</description>
+                    <baseMoodEffect>20</baseMoodEffect>
+                </li>
+            </stages>
+    </ThoughtDef>
+
+    <!-- Coffee -->
+    <ThingDef ParentName="MealCooked">
+        <defName>BEWH_Cattuccino</defName>
+        <label>Cattuccino</label>
+        <description>Cattuccino a la Satyr. Space Maids' special blend. Energizes and improves a space marine's mood for the entire day. Some will say it is just a triple-distilled recaf concentrate, but only the faithless fail to feel the Emperor's cozy embrace in every sip./n/nThe Emperor protects... and also caffeinates.</description>
+        <descriptionHyperlinks>
+            <HediffDef>BEWH_CattuccinoHediff</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Things/Food/Coffee</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <statBases>
+            <WorkToMake>350</WorkToMake>
+            <MarketValue>7</MarketValue>
+            <Mass>0.075</Mass>
+            <DeteriorationRate>8</DeteriorationRate>
+            <Nutrition>0.5</Nutrition>
+        </statBases>
+        <techLevel>Spacer</techLevel>
+        <ingestible>
+            <foodType>Processed, Fluid</foodType>
+            <joyKind>Gluttonous</joyKind>
+            <joy>0.1</joy>
+            <baseIngestTicks>350</baseIngestTicks>
+			<maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+            <ingestSound>Meal_Eat</ingestSound>
+            <ingestHoldUsesTable>false</ingestHoldUsesTable>
+            <ingestCommandString>Drink {0}</ingestCommandString>
+            <ingestReportString>Is drinking {0}.</ingestReportString>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>BEWH_CattuccinoHediff</hediffDef>
+                    <severity>1</severity>
+                </li>
+            </outcomeDoers>
+            <preferability>MealSimple</preferability>
+        </ingestible>
+        <recipeMaker>
+            <recipeUsers>
+                <li>ElectricStove</li>
+                <li>FueledStove</li>
+                <li>BEWH_SpaceMaidsDropPodBuilding</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Brewing</soundWorking>
+        </recipeMaker>
+        <costList>
+            <Chocolate>1</Chocolate>
+            <Milk>2</Milk>
+            <Chemfuel>2</Chemfuel>
+        </costList>
+    </ThingDef>
+
+
+    <HediffDef>
+        <defName>BEWH_CattuccinoHediff</defName>
+        <label>Full of Cattuccino</label>
+        <labelNoun>Full of Cattuccino</labelNoun>
+        <description>The mind is sharp, the body is willing, the sleep is a distant, optional concept.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-3.0</severityPerDay>
+                <showHoursToRecover>true</showHoursToRecover>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>0.10</offset>
+                    </li>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>0.05</offset>
+                    </li>
+                </capMods>
+                <statOffsets>
+                    <WorkSpeedGlobal>0.15</WorkSpeedGlobal>
+                </statOffsets>
+                <statFactors>
+                    <RestFallRateFactor>0.2</RestFallRateFactor>
+                </statFactors>
+                <hediffGivers>
+                    <li Class="HediffGiver_Random">
+                    <hediff>HeartAttack</hediff>
+                    <mtbDays>120</mtbDays>
+                    <partsToAffect>
+                        <li>Heart</li>
+                    </partsToAffect>
+                    </li>
+                </hediffGivers>
+             </li>
+        </stages>
+    </HediffDef>
+
+    <ThoughtDef>
+        <defName>BEWH_CattuccinoThought</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>BEWH_CattuccinoHediff</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+            <stages>
+                <li>
+                    <label>Cattuccino cozy</label>
+                    <description>I feel the Emperor's warm embrace.</description>
+                    <baseMoodEffect>6</baseMoodEffect>
+                </li>
+            </stages>
+    </ThoughtDef>
+
+    <!-- Omlette -->
+    <ThingDef ParentName="MealCooked">
+        <defName>BEWH_Omurice</defName>
+        <label>Omurice</label>
+        <description>Golden omelette blanket tucked around a pillow of warm fried rice, finished with a swirl of semi-sweet ketchup. It arrives with a bright "Nyan~!" and the quiet promise that everything will be okay, as long as you eat it while it's still fluffy.</description>
+        <descriptionHyperlinks>
+            <HediffDef>BEWH_OmuriceHediff</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Things/Food/Omlette</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <statBases>
+            <WorkToMake>350</WorkToMake>
+            <MarketValue>7</MarketValue>
+            <Mass>0.075</Mass>
+            <DeteriorationRate>8</DeteriorationRate>
+            <Nutrition>1</Nutrition>
+        </statBases>
+        <techLevel>Spacer</techLevel>
+        <ingestible>
+            <foodType>Processed</foodType>
+            <joyKind>Gluttonous</joyKind>
+            <joy>0.80</joy>
+            <baseIngestTicks>350</baseIngestTicks>
+			<maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+            <ingestSound>Meal_Eat</ingestSound>
+            <ingestHoldUsesTable>true</ingestHoldUsesTable>
+            <ingestCommandString>Eat {0}</ingestCommandString>
+            <ingestReportString>Is eating {0}.</ingestReportString>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>BEWH_OmuriceHediff</hediffDef>
+                    <severity>1</severity>
+                </li>
+            </outcomeDoers>
+            <preferability>MealLavish</preferability>
+        </ingestible>
+        <recipeMaker>
+            <recipeUsers>
+                <li>ElectricStove</li>
+                <li>FueledStove</li>
+                <li>BEWH_SpaceMaidsDropPodBuilding</li>
+            </recipeUsers>
+        </recipeMaker>
+        <costList>
+            <RawRice>10</RawRice>
+            <Milk>5</Milk>
+            <Meat_Chicken>5</Meat_Chicken>
+        </costList>
+    </ThingDef>
+
+    <HediffDef>
+        <defName>BEWH_OmuriceHediff</defName>
+        <label>Omuriced</label>
+        <labelNoun>Omuriced</labelNoun>
+        <description>A pleasant warmth settles in. The cold feels less cold. The war feels less war.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-1.8</severityPerDay>
+                <showHoursToRecover>true</showHoursToRecover>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>-0.05</offset>
+                    </li>
+                </capMods>
+                <statOffsets>
+                    <ComfyTemperatureMin>-20</ComfyTemperatureMin>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThoughtDef>
+        <defName>BEWH_OmuriceThought</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>BEWH_OmuriceHediff</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+            <stages>
+                <li>
+                    <label>Maid-touched</label>
+                    <description>I ate a wonderful, hearty meal I couldn't even have imagined existed. Nyan~? I mean...</description>
+                    <baseMoodEffect>20</baseMoodEffect>
+                </li>
+            </stages>
+    </ThoughtDef>
+</Defs>

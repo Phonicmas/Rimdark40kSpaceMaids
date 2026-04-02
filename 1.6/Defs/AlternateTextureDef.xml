@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- Power Paw -->
+    <Core40k.AlternateBaseFormDef>
+        <defName>BEWH_AstartesPowerPaw</defName>
+        <label>Power Paw</label>
+        <description>...</description>
+        <iconPath>Things/WeaponReplacers/BEWH_MaidsPowerPaw</iconPath>
+        <drawnTextureIconPath>Things/WeaponReplacers/BEWH_MaidsPowerPaw</drawnTextureIconPath>
+        <appliesTo>
+            <li>BEWH_AstartesPowerFist</li>
+        </appliesTo>
+        <colorAmount>3</colorAmount>
+        <newPrimaryColor>(229, 100, 157)</newPrimaryColor> <!-- This sets the default colors for the alternative texture mask -->
+        <newSecondaryColor>(251, 180, 108)</newSecondaryColor>
+        <newTertiaryColor>(253, 213, 226)</newTertiaryColor>
+    </Core40k.AlternateBaseFormDef>
+
+    <!-- Power Spoon -->
+    <Core40k.AlternateBaseFormDef>
+        <defName>BEWH_AstartesPowerSpoon</defName>
+        <label>Power Spoon</label>
+        <description>...</description>
+        <iconPath>Things/WeaponReplacers/BEWH_MaidsPowerSpoon</iconPath>
+        <drawnTextureIconPath>Things/WeaponReplacers/BEWH_MaidsPowerSpoon</drawnTextureIconPath>
+        <appliesTo>
+            <li>BEWH_AstartesPowerMaul</li>
+        </appliesTo>
+        <colorAmount>3</colorAmount>
+        <newDrawSize>(1.45, 1.45)</newDrawSize>
+        <newPrimaryColor>(168, 73, 95)</newPrimaryColor>
+        <newSecondaryColor>(251, 180, 108)</newSecondaryColor>
+        <newTertiaryColor>(229, 100, 157)</newTertiaryColor>
+    </Core40k.AlternateBaseFormDef>
+
+    <!-- Power Fork -->
+    <Core40k.AlternateBaseFormDef>
+        <defName>BEWH_AstartesPowerFork</defName>
+        <label>Power Fork</label>
+        <description>...</description>
+        <iconPath>Things/WeaponReplacers/BEWH_MaidsPowerFork</iconPath>
+        <drawnTextureIconPath>Things/WeaponReplacers/BEWH_MaidsPowerFork</drawnTextureIconPath>
+        <appliesTo>
+            <li>BEWH_AstartesThunderhammer</li>
+        </appliesTo>
+        <colorAmount>2</colorAmount>
+        <newPrimaryColor>(168, 73, 95)</newPrimaryColor>
+        <newSecondaryColor>(251, 180, 108)</newSecondaryColor>
+        <newTertiaryColor>(229, 100, 157)</newTertiaryColor>
+    </Core40k.AlternateBaseFormDef>
+
+    <!-- Power Knife -->
+    <Core40k.AlternateBaseFormDef>
+        <defName>BEWH_AstartesPowerKnife</defName>
+        <label>Power Knife</label>
+        <description>...</description>
+        <iconPath>Things/WeaponReplacers/BEWH_MaidsPowerKnife</iconPath>
+        <drawnTextureIconPath>Things/WeaponReplacers/BEWH_MaidsPowerKnife</drawnTextureIconPath>
+        <appliesTo>
+            <li>BEWH_AstartesPowerSword</li>
+        </appliesTo>
+        <colorAmount>2</colorAmount>
+		<newDrawSize>(1.4, 1.4)</newDrawSize>
+        <newPrimaryColor>(168, 73, 95)</newPrimaryColor>
+        <newSecondaryColor>(251, 180, 108)</newSecondaryColor>
+    </Core40k.AlternateBaseFormDef>
+
+</Defs>

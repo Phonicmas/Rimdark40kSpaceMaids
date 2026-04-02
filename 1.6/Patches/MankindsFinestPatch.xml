@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="BEWH_AstartesBolter"]/comps/li[@Class="Core40k.CompProperties_AmmoChanger"]/availableProjectiles</xpath>
+        <value>
+            <li>BEWH_BolterRoundMacaron</li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/Core40k.RankCategoryDef[defName="BEWH_AstartesRankCategory"]/ranks</xpath>
+        <value>
+            <li>
+                <rankDef>BEWH_SpaceMaidsBattleSibling</rankDef>
+                <displayPosition>(1, 1)</displayPosition>
+                <rankRequirements>
+                    <BEWH_AstartesRankNeophyte>5</BEWH_AstartesRankNeophyte>
+                </rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_SpaceMaidsCafeCutie</rankDef>
+                <displayPosition>(0, 1)</displayPosition>
+                <rankRequirements>
+                    <BEWH_SpaceMaidsBattleSibling>15</BEWH_SpaceMaidsBattleSibling>
+                </rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_SpaceMaidsHousekeeper</rankDef>
+                <displayPosition>(0.5, 2)</displayPosition>
+                <rankRequirements>
+                    <BEWH_SpaceMaidsBattleSibling>10</BEWH_SpaceMaidsBattleSibling>
+                </rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_SpaceMaidsSousChef</rankDef>
+                <displayPosition>(1.5, 2)</displayPosition>
+                <rankRequirements>
+                    <BEWH_SpaceMaidsBattleSibling>10</BEWH_SpaceMaidsBattleSibling>
+                </rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_SpaceMaidsManager</rankDef>
+                <displayPosition>(1, 3)</displayPosition>
+                <rankRequirements>
+                    <BEWH_SpaceMaidsHousekeeper>15</BEWH_SpaceMaidsHousekeeper>
+                    <BEWH_SpaceMaidsSousChef>15</BEWH_SpaceMaidsSousChef>
+                </rankRequirements>
+            </li>
+            <li>
+                <rankDef>BEWH_SpaceMaidsCafeMaster</rankDef>
+                <displayPosition>(2, 3)</displayPosition>
+                <rankRequirements>
+                    <BEWH_SpaceMaidsManager>20</BEWH_SpaceMaidsManager>
+                </rankRequirements>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="BEWH_AstartesPowerSword"]/modExtensions/li[@Class="Core40k.DefModExtension_AvailableDrawerTabDefs"]/tabDefs/li[text()="BEWH_WeaponAlternateBaseForms"]</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="BEWH_AstartesPowerSword"]/modExtensions/li[@Class="Core40k.DefModExtension_AvailableDrawerTabDefs"]/tabDefs</xpath>
+            <value>
+                <li>BEWH_WeaponAlternateBaseForms</li>
+            </value>
+        </nomatch>
+    </Operation>
+
+    <!-- Add pink preset to lense glow for all Mankinds Finest helmets -->	
+    <Operation Class="PatchOperationSequence">   
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/Core40k.ExtraDecorationDef[defName="BEWH_Deco_MkVIILenseGlow"]/availablePresets</xpath>
+                    <value>
+                        <li>BEWH_DecoPaletteLenseGlowPink</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/Core40k.ExtraDecorationDef[defName="BEWH_Deco_MkXLenseGlow"]/availablePresets</xpath>
+                    <value>
+                        <li>BEWH_DecoPaletteLenseGlowPink</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/Core40k.ExtraDecorationDef[defName="BEWH_Deco_MkXCLenseGlow"]/availablePresets</xpath>
+                    <value>
+                        <li>BEWH_DecoPaletteLenseGlowPink</li>
+                    </value>
+                </li>
+            </operations>
+    </Operation>
+
+</Patch>

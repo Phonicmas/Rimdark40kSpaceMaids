@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Lightning Claws -->
+  <ThingDef ParentName="BEWH_AstartesMeleeBase">
+    <defName>BEWH_ClawsOfDuty</defName>
+    <label>claws of duty</label>
+    <description>An armored gauntlet equipped with five cat-like claws, each emitting its own disruptive power field, like a miniature power sword on every finger. Nekona got the idea from her brother Horus Luperkal, during the times of the Heresy when he was trying to persuade her to join the heretics. Nekona didn't give in to the heresy, but she did yoink the design.</description>
+    <soundInteract>BEWH_SFX_PowerswordInteract</soundInteract>
+    <meleeHitSound>BEWH_SFX_GravitonMaulHit</meleeHitSound>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+      <workSkill>Crafting</workSkill>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>46000</WorkToMake>
+      <Mass>10</Mass>
+    </statBases>
+    <costList>
+      <Plasteel>55</Plasteel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+      <ComponentSpacer>5</ComponentSpacer>
+      <Gold>15</Gold>
+    </costList>
+    <costStuffCount>45</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <graphicData>
+      <texPath>Things/Weapons/BEWH_ClawsOfDuty</texPath>
+      <shaderType>CutoutComplex</shaderType>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <tools>
+      <li>
+        <label>claws</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>17</power>
+        <cooldownTime>1.8</cooldownTime>
+        <armorPenetration>1.2</armorPenetration>
+      </li>
+    </tools>
+    <modExtensions>
+      <li Class="VEF.Things.ThingDefExtension">
+        <weaponCarryDrawOffsets>
+          <north>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </north>
+          <east>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </east>
+          <south>
+            <drawOffset>(-0.3, 0, -0.15)</drawOffset>
+          </south>
+          <west>
+            <drawOffset>(0, 0, -0.15)</drawOffset>
+          </west>
+        </weaponCarryDrawOffsets>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- MACARON BOLT -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>BEWH_BolterRoundMacaron</defName>
+    <label>Macaron bolt</label>
+    <description>A gyrojet-stabilized, mass-reactive pastry round that penetrates the target's personal space. Upon impact, the macaron-bolt forcibly delivers a high-calorie payload directly into the target's mouth. Armor - irrelevant, resistance - futile. Dietary restraint is the first system to fail.</description>
+    <thingClass>Bullet</thingClass>
+    <uiIconPath>UI/BEWH_MacaronBolt_icon</uiIconPath>
+    <graphicData>
+      <texPath>Things/Projectiles/Macaron</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <drawSize>(0.65, 0.65)</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>BEWH_ForceFeed</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <armorPenetrationBase>9999</armorPenetrationBase>
+      <soundExplode>GunShotA</soundExplode>
+      <screenShakeFactor>0</screenShakeFactor>
+      <speed>60</speed>
+    </projectile>
+    <modExtensions>
+      <li Class="Core40k.DefModExtension_AmmoChanger" />
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

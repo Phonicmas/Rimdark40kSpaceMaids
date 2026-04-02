@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Nekona Hand Feed -->
+	<SoundDef>
+		<defName>BEWH_SFX_HandFeed</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>BEWH_Bite</clipPath>
+					</li>
+				</grains>
+				<volumeRange>12~14</volumeRange>
+				<pitchRange>0.95~1.15</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+</Defs>

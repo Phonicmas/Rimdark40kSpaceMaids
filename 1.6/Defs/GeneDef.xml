@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- CHAPTER -->
+    <GeneDef ParentName="BEWH_ChapterGeneParent">
+        <defName>BEWH_ChapterSpaceMaids</defName>
+        <label>Gene-seed Material: Space Maids</label>
+        <description>Your gene-seed is a successor of the... CARAMEL DANSEN UH-UH-UHWAUAUAWAA.</description>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_LegionIISpaceMaids</iconPath>
+        <displayOrderInCategory>103</displayOrderInCategory>
+        <geneClass>NyanDark40k.Gene_SpaceMaidsServitile</geneClass>
+        <statFactors>
+            <CleaningSpeed>1.7</CleaningSpeed>
+            <CookSpeed>1.30</CookSpeed>
+            <FoodPoisonChance>0.45</FoodPoisonChance>
+            <DrugCookingSpeed>1.30</DrugCookingSpeed>
+        </statFactors>
+        <enablesNeeds>
+            <li>BEWH_SpaceMaidsServitileNeed</li>
+        </enablesNeeds>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_ChapterGene">
+                <chapterName>Space Maids</chapterName>
+            </li>
+            <li Class="NyanDark40k.DefModExtension_ServitileNeedFill">
+                <jobDefs>
+                    <li>FeedPatient</li>
+                    <li>TendPatient</li>
+                    <li>DeliverFood</li>
+                    <li>Clean</li>
+                    <li>ClearSnow</li>
+                    <li>HaulToCell</li>
+                    <li>HaulToContainer</li>
+                    <li>HaulToTransporter</li>
+                    <li>Repair</li>
+                    <li>DoBill</li>
+                </jobDefs>
+            </li>
+            <li Class="Core40k.DefModExtension_ChanceToAddEachGene">
+                <possibleGenesToGive>
+                    <li>
+                        <key>BEWH_ChapterSpaceMaidsCatMouth</key>
+                        <value>100</value>                        <!-- this is codex-accurate -->
+                    </li>
+                    <li>
+                        <key>BEWH_ChapterSpaceMaidsCatNose</key>
+                        <value>30</value>
+                    </li>
+                    <li>
+                        <key>BEWH_ChapterSpaceMaidsCatEyes</key>
+                        <value>30</value>
+                    </li>
+                    <li>
+                        <key>BEWH_ChapterSpaceMaidsCatEars</key>
+                        <value>45</value>
+                    </li>
+                    <!-- <li>
+                        <key>Tail_Smooth</key>
+                        <value>20</value>
+                    </li> -->                    <!-- It looks kinda meh with our power armor -->
+                    <li>
+                        <key>Furskin</key>
+                        <value>1</value>
+                    </li>
+                    <li>
+                        <key>KindInstinct</key>
+                        <value>15</value>
+                    </li>
+                </possibleGenesToGive>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="BEWH_ChapterGeneFlawParent">
+        <defName>BEWH_ChapterSpaceMaidsCatMouth</defName>
+        <label>Cat-like mouth</label>
+        <description>All descendants of Nekona have cat-like mouths, making them extremely cute.</description>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_LegionIISpaceMaids_mouth</iconPath>
+        <displayOrderInCategory>104</displayOrderInCategory>
+        <statOffsets>
+            <BEWH_Cuteness>20</BEWH_Cuteness>
+        </statOffsets>
+        <exclusionTags Inherit="False" />
+    </GeneDef>
+
+    <GeneDef ParentName="BEWH_ChapterGeneFlawParent">
+        <defName>BEWH_ChapterSpaceMaidsCatNose</defName>
+        <label>Cat-like nose</label>
+        <description>Some descendants of Nekona have a cat-like nose that makes it easier for them to hunt prey and detect spoiled food.</description>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_LegionIISpaceMaids_nose</iconPath>
+        <displayOrderInCategory>104</displayOrderInCategory>
+        <statFactors>
+            <FoodPoisonChance>0.2</FoodPoisonChance>
+            <HuntingStealth>1.05</HuntingStealth>
+        </statFactors>
+        <aptitudes>
+            <Cooking>2</Cooking>
+        </aptitudes>
+        <exclusionTags Inherit="False" />
+    </GeneDef>
+
+    <GeneDef ParentName="BEWH_ChapterGeneFlawParent">
+        <defName>BEWH_ChapterSpaceMaidsCatEyes</defName>
+        <label>Cat-like eyes</label>
+        <description>Some descendants of Nekona have cat-like eyes, enabling them to see in the dark.</description>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_LegionIISpaceMaids_eyes</iconPath>
+        <displayOrderInCategory>105</displayOrderInCategory>
+        <capMods>
+            <li>
+                <capacity>Sight</capacity>
+                <postFactor>1.33</postFactor>
+            </li>
+        </capMods>
+        <ignoreDarkness>true</ignoreDarkness>
+        <exclusionTags Inherit="False" />
+    </GeneDef>
+
+    <GeneDef ParentName="BEWH_ChapterGeneFlawParent">
+        <defName>BEWH_ChapterSpaceMaidsCatEars</defName>
+        <label>Cat-like ears</label>
+        <description>Some descendants of Nekona have cat-like ears, which enhance their hearing.</description>
+        <iconPath>UI/Genes/ChapterSpecific/BEWH_CatEars</iconPath>
+        <displayOrderInCategory>105</displayOrderInCategory>
+        <capMods>
+            <li>
+                <capacity>Hearing</capacity>
+                <postFactor>1.4</postFactor>
+            </li>
+        </capMods>
+        <renderNodeProperties>
+            <li>
+                <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+                <workerClass>NyanDark40k.PawnRenderNodeWorker_HeadCovered</workerClass>
+                <texPath>Things/Pawn/Humanlike/HeadAttachments/CatEars/CatEars</texPath>
+                <colorType>Hair</colorType>
+                <parentTagDef>Head</parentTagDef>
+                <useSkinShader>false</useSkinShader>
+                <useRottenColor>true</useRottenColor>
+                <rotDrawMode>Fresh, Rotting</rotDrawMode>
+                <drawData>
+                    <defaultData>
+                        <layer>70</layer>
+                    </defaultData>
+                </drawData>
+            </li>
+        </renderNodeProperties>
+        <exclusionTags Inherit="False" />
+    </GeneDef>
+
+    <!-- PRIMARCH -->
+    <GeneDef ParentName="BEWH_PrimarchSpecific">
+        <defName>BEWH_PrimarchSpecificGeneSpaceMaids</defName>
+        <label>Nekona</label>
+        <description>The genetic material of Nekona.</description>
+        <iconPath>UI/Genes/PrimarchSpecific/BEWH_Nekona</iconPath>
+        <displayOrderInCategory>402</displayOrderInCategory>
+        <statOffsets>
+            <PawnBeauty>1</PawnBeauty>
+            <MentalBreakThreshold>0.25</MentalBreakThreshold>
+        </statOffsets>
+        <statFactors>
+            <CleaningSpeed>2</CleaningSpeed>
+            <MoveSpeed>1.15</MoveSpeed>
+            <CookSpeed>2</CookSpeed>
+            <DrugCookingSpeed>2</DrugCookingSpeed>
+            <SocialImpact>1.5</SocialImpact>
+        </statFactors>
+        <hairColorOverride>(231, 231, 231)</hairColorOverride>
+        <aptitudes>
+            <Cooking>7</Cooking>
+            <Social>4</Social>
+        </aptitudes>
+        <passionMod>
+            <skill>Cooking</skill>
+            <modType>AddOneLevel</modType>
+        </passionMod>
+        <skinColorOverride>(210, 136, 136)</skinColorOverride>
+        <forcedTraits>
+            <li>
+                <def>Kind</def>
+            </li>
+        </forcedTraits>
+        <ignoreDarkness>true</ignoreDarkness>
+        <suppressedTraits>
+            <li>
+                <def>DislikesWomen</def>
+            </li>
+            <li>
+                <def>DislikesMen</def>
+            </li>
+            <li>
+                <def>Pyromaniac</def>
+            </li>
+            <li>
+                <def>CreepyBreathing</def>
+            </li>
+            <li>
+                <def>Masochist</def>
+            </li>
+            <li>
+                <def>Abrasive</def>
+            </li>
+            <li>
+                <def>Cannibal</def>
+            </li>
+            <li>
+                <def>Psychopath</def>
+            </li>
+            <li>
+                <def>Bloodlust</def>
+            </li>
+            <li>
+                <def>NaturalMood</def>
+                <degree>-1</degree>
+            </li>
+            <li>
+                <def>NaturalMood</def>
+                <degree>-2</degree>
+            </li>
+        </suppressedTraits>
+        <iconColor>(255, 255, 255)</iconColor>
+        <geneClass>Core40k.Gene_GiveVEFAbility</geneClass>
+        <abilities>
+            <li>BEWH_NekonaHandFeed</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>BEWH_NekonaHandFeed</AbilityDef>
+        </descriptionHyperlinks>
+        <customEffectDescriptions>
+            <li>Ability to call in yummy reinforcements.</li>
+        </customEffectDescriptions>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_PrimarchMaterial">
+                <relatedMaterial>BEWH_PrimarchMaterialSpaceMaids</relatedMaterial>
+            </li>
+            <li Class="VEF.Genes.GeneExtension">
+                <backgroundPathArchite>UI/Genes/BEWH_GeneBackground_Primarch</backgroundPathArchite>
+                <forceFemale>true</forceFemale>
+            </li>
+            <li Class="Core40k.DefModExtension_GivesVEFAbility">
+                <abilityDefs>
+                    <li>BEWH_SpaceMaidsDropPod</li>
+                </abilityDefs>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+</Defs>

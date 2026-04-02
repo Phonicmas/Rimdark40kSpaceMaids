@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <NeedDef>
+    <defName>BEWH_SpaceMaidsServitileNeed</defName>
+    <needClass>NyanDark40k.Need_Servitile</needClass>
+    <label>devotion</label>
+    <description>Space Maids' calling is to serve. It is not a choice - it is a need encoded in their genes by Nekona herself. Attending to others, keeping spaces clean, and ensuring that everyone is properly fed fulfills something deep and essential in a Maid's heart.</description>
+    <fallPerDay>0.15</fallPerDay>
+    <minIntelligence>ToolUser</minIntelligence>
+    <colonistsOnly>true</colonistsOnly>
+    <onlyIfCausedByGene>true</onlyIfCausedByGene>
+  </NeedDef>
+
+</Defs>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- Space Maids chapter icon -->
+    <Genes40k.ShoulderIconDef ParentName="BEWH_ChapterShoulderIcon">
+        <defName>BEWH_LegionIconSpaceMaids</defName>
+        <label>Space Maids</label>
+        <description>Legion icon of the Space Maids.</description>
+        <iconPath>UI/Decoration/LegionBadges/BEWH_iconUI_Legion_IISpaceMaids</iconPath>
+        <drawnTextureIconPath>Things/ShoulderIcons/ChapterIcons/BEWH_SpaceMaidsShoulder</drawnTextureIconPath>
+        <sortOrder>98</sortOrder>
+        <relatedChapterGene>BEWH_ChapterSpaceMaids</relatedChapterGene>
+        <useColour>false</useColour> <!-- This allows player to colour their icons-->   
+        <defaultColour>(226, 105, 139)</defaultColour> <!-- This sets the default colour of the icon (Defaults to white if null) -->
+    </Genes40k.ShoulderIconDef>
+
+</Defs>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- FOOD SERVICE DROP POD BUILDING -->
+    <ThingDef ParentName="BuildingBase">
+        <defName>BEWH_SpaceMaidsDropPodBuilding</defName>
+        <label>Food Service Drop Pod</label>
+        <description>Food Service Drop Pod equipped with a Tactical Meal Forge, capable of rapidly producing large quantities of food, and a Table Setter Cannon, which launches disposable table shells, converting the area into a comfortable dining space for the customers.</description>
+        <thingClass>NyanDark40k.Building_PicnicWorktableDrop</thingClass>
+        <drawerType>RealtimeOnly</drawerType>
+        <graphicData>
+            <texPath>Things/Building/BEWH_MaidDropPod_Closed</texPath>
+            <shaderType>Cutout</shaderType>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(6.5,6.5)</drawSize>
+            <drawOffset>(0, 0, -0.5)</drawOffset>
+            <damageData>
+                <rect>(0.2,0.2,0.6,0.6)</rect>
+            </damageData>
+            <shadowData>
+                <volume>(0.27,0.25,0.27)</volume>
+                <offset>(0,0,0)</offset>
+            </shadowData>
+        </graphicData>
+        <uiIconPath>Things/Building/DropPod/BEWH_DropPodIcon</uiIconPath>
+        <uiIconScale>0.90</uiIconScale>
+        <altitudeLayer>BuildingOnTop</altitudeLayer>
+        <stealable>false</stealable>
+        <rotatable>false</rotatable>
+        <statBases>
+            <MaxHitPoints>5000</MaxHitPoints>
+            <Flammability>0</Flammability>
+            <Mass>50</Mass>
+            <Beauty>5</Beauty>
+            <WorkTableWorkSpeedFactor>1.69</WorkTableWorkSpeedFactor>
+        </statBases>
+        <tickerType>Normal</tickerType>
+        <passability>PassThroughOnly</passability>
+        <pathCost>50</pathCost>
+        <fillPercent>0.8</fillPercent>
+        <hasTooltip>true</hasTooltip>
+        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+        <hasInteractionCell>True</hasInteractionCell>
+        <interactionCellOffset>(0,0,-2)</interactionCellOffset>
+        <size>(3,3)</size>
+
+        <inspectorTabs>
+            <li>ITab_Bills</li>
+        </inspectorTabs>
+        <surfaceType>Item</surfaceType>
+
+        <building>
+            <isMealSource>true</isMealSource>
+            <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+
+            <combatPower>45</combatPower>
+            <ai_combatDangerous>true</ai_combatDangerous>
+            <deconstructible>true</deconstructible>
+            <claimable>false</claimable>
+            <neverBuildable>true</neverBuildable>
+
+        </building>
+        <stuffCategories Inherit="False" />
+        <designationCategory IsNull="True"/>
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <wickTicks>240</wickTicks>
+                <explosiveRadius>9.9</explosiveRadius>
+                <explosiveDamageType>Bomb</explosiveDamageType>
+                <chanceNeverExplodeFromDamage>0.5</chanceNeverExplodeFromDamage>
+            </li>
+            <!-- <li>
+                <compClass>CompColorable</compClass>
+            </li> -->
+            <li Class="Genes40k.CompProperties_LifespanDropItem">
+                <lifespanTicks>30000</lifespanTicks>
+                <expireEffect>RaisedRock_Collapse</expireEffect>
+                <droppedThingDef>ChunkSlagSteel</droppedThingDef>
+                <amountDropped>1</amountDropped>
+            </li>
+        </comps>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_DropPod">
+                <openGraphic>Things/Building/BEWH_MaidDropPod</openGraphic>
+                <openSound>ThumpCannon_Impact</openSound>
+            </li>
+            <li Class="NyanDark40k.DefModExtension_IgnoreWorkTablePenalties" />
+            <li Class="VEF.Buildings.RecipeInheritanceExtension">
+                <inheritRecipesFrom>
+                    <li>ElectricStove</li>
+                </inheritRecipesFrom>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <!-- FOOD SERVICE DROP POD SKYFALLER -->
+    <ThingDef ParentName="SkyfallerBase">
+        <defName>BEWH_SpaceMaidsDropPodSkyfaller</defName>
+        <label>food service drop pod</label>
+        <size>(1, 1)</size>
+        <graphicData>
+            <texPath>Things/Building/BEWH_MaidDropPod_Closed</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>Cutout</shaderType>
+            <drawSize>(5, 5)</drawSize>
+        </graphicData>
+        <skyfaller>
+            <shadowSize>(3, 3)</shadowSize>
+            <shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
+            <anticipationSound>DropPod_Fall</anticipationSound>
+            <anticipationSoundTicks>100</anticipationSoundTicks>
+            <impactSound>DropPod_Impact</impactSound>
+
+            <explosionRadius>2</explosionRadius>
+            <explosionDamage>Bomb</explosionDamage>
+            <explosionDamageFactor>0.5</explosionDamageFactor>
+        </skyfaller>
+    </ThingDef>
+
+    <!-- Picnic Table Projectile -->
+    <ThingDef>
+        <defName>BEWH_PicnicProjectile</defName>
+        <label>table shell</label>
+        <description>...</description>
+        <thingClass>NyanDark40k.PicnicProjectile</thingClass>
+        <category>Projectile</category>
+        <tickerType>Normal</tickerType>
+        <altitudeLayer>Projectile</altitudeLayer>
+        <useHitPoints>False</useHitPoints>
+        <neverMultiSelect>True</neverMultiSelect>
+        <uiIconPath>Things/Projectiles/BEWH_TableProjectile</uiIconPath>
+        <graphicData>
+            <texPath>Things/Projectiles/BEWH_TableProjectile</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.85, 0.85)</drawSize>
+        </graphicData>
+        <projectile>
+            <damageDef>Blunt</damageDef>
+            <damageAmountBase>3</damageAmountBase>
+            <armorPenetrationBase>0.1</armorPenetrationBase>
+            <soundExplode>GunShotA</soundExplode>
+            <screenShakeFactor>0</screenShakeFactor>
+            <speed>25</speed>
+            <flyOverhead>true</flyOverhead>
+        </projectile>
+    </ThingDef>
+
+</Defs>

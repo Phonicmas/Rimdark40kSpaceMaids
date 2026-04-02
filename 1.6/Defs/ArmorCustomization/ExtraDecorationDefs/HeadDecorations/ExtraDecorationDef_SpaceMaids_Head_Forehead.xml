@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- Forehead decor -->
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_DecoForeheadHeart</defName>
+        <label>Heart</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/Headgear/BEWH_Deco_HeadHeart_icon</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_Heart</drawnTextureIconPath>
+        <drawSize>(0.125, 0.125)</drawSize>
+        <sortOrder>0</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>West</li>
+            <li>South</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmorHelmet</li>
+            <li>BEWH_MkXPowerArmorHelmet</li>
+        </appliesTo>
+        <drawData>
+            <dataSouth>
+                <layer>76</layer>
+                <offset>(0, 0, 0.04)</offset>
+            </dataSouth>
+            <dataEast>
+                <layer>70.8</layer>
+                <offset>(0.185, 0, 0.04)</offset>
+            </dataEast>
+            <dataWest>
+                <layer>70.8</layer>
+                <offset>(-0.185, 0, 0.04)</offset>
+            </dataWest>
+        </drawData>
+        <colourable>true</colourable>
+        <defaultColour>(252, 196, 139)</defaultColour>
+        <shaderType>Cutout</shaderType>
+        <availablePresets>
+            <li>BEWH_DecoPalettePink_1</li>
+            <li>BEWH_DecoPalettePink_2</li>
+            <li>BEWH_DecoPaletteGoldPastel</li>
+        </availablePresets>
+    </Core40k.ExtraDecorationDef>
+
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_DecoForeheadStar</defName>
+        <label>Star</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/Headgear/BEWH_Deco_HeadStar_icon</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_Star</drawnTextureIconPath>
+        <drawSize>(0.13, 0.13)</drawSize>
+        <sortOrder>0</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>West</li>
+            <li>South</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmorHelmet</li>
+            <li>BEWH_MkXPowerArmorHelmet</li>
+        </appliesTo>
+        <drawData>
+            <dataSouth>
+                <layer>76</layer>
+                <offset>(0, 0, 0.048)</offset>
+            </dataSouth>
+            <dataEast>
+                <layer>70.8</layer>
+                <offset>(0.185, 0, 0.048)</offset>
+            </dataEast>
+            <dataWest>
+                <layer>70.8</layer>
+                <offset>(-0.185, 0, 0.048)</offset>
+            </dataWest>
+        </drawData>
+        <colourable>true</colourable>
+        <defaultColour>(252, 196, 139)</defaultColour>
+        <shaderType>Cutout</shaderType>
+        <availablePresets>
+            <li>BEWH_DecoPalettePink_1</li>
+            <li>BEWH_DecoPalettePink_2</li>
+            <li>BEWH_DecoPaletteGoldPastel</li>
+        </availablePresets>
+    </Core40k.ExtraDecorationDef>
+
+</Defs>

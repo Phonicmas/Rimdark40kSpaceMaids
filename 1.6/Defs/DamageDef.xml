@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <DamageDef>
+        <defName>BEWH_ForceFeed</defName>
+        <label>force feed</label>
+        <deathMessage>{0} has been over-fed to death.</deathMessage>
+        <workerClass>NyanDark40k.DamageWorker_ForceFeed</workerClass>
+
+        <hediff>Crush</hediff>
+        <hediffSkin>Bruise</hediffSkin>
+        <hediffSolid>Crack</hediffSolid>
+        <armorCategory>Blunt</armorCategory>
+
+        <overkillPctToDestroyPart>0.4~1.0</overkillPctToDestroyPart>
+
+        <externalViolence>false</externalViolence>
+        <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+        <makesAnimalsFlee>false</makesAnimalsFlee>
+        <hasForcefulImpact>true</hasForcefulImpact>
+        <harmsHealth>true</harmsHealth>
+        <makesBlood>false</makesBlood>
+        <canInterruptJobs>false</canInterruptJobs>
+
+        <isRanged>true</isRanged>
+        <impactSoundType>Bullet</impactSoundType>
+        <defaultDamage>1</defaultDamage>
+        <defaultArmorPenetration>9999</defaultArmorPenetration>
+        <buildingDamageFactor>0</buildingDamageFactor>
+        <buildingDamageFactorPassable>0</buildingDamageFactorPassable>
+        <buildingDamageFactorImpassable>0</buildingDamageFactorImpassable>
+        <plantDamageFactor>0</plantDamageFactor>
+        <corpseDamageFactor>0</corpseDamageFactor>
+    </DamageDef>
+
+</Defs>

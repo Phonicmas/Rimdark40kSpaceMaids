@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Space Maid - Picnic Drop-->
+    <VEF.Abilities.AbilityDef>
+        <defName>BEWH_SpaceMaidsDropPod</defName>
+        <label>Open terrace protocol</label>
+        <description>Summons a Food Service Drop Pod equipped with a Tactical Meal Forge, capable of rapidly producing large quantities of food, and a Table Setter Cannon, which launches disposable table shells, that convert the area into a comfortable dining space for the customers.\n\nNo one should eat without a table. The Emperor would never wish such a horrible fate upon any of his children.</description>
+        <iconPath>UI/Abilities/BEWH_Ability_MaidsPicnicDrop</iconPath>
+        <abilityClass>NyanDark40k.Ability_PicnicDrop</abilityClass>
+        <castTime>100</castTime>
+        <range>40.9</range>
+        <radius>15.9</radius>
+        <cooldownTime>240000</cooldownTime>
+        <targetMode>Location</targetMode>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_DropPod">
+                <chapterColour>BEWH_ChapterColourSpaceMaids</chapterColour>
+                <dropPodAmount>1</dropPodAmount>
+                <marinesToSpawn>1</marinesToSpawn>
+                <fromFaction>BEWH_OffworldMarinesFaction</fromFaction>
+                <innerThing>BEWH_SpaceMaidsDropPodBuilding</innerThing>
+                <skyFaller>BEWH_SpaceMaidsDropPodSkyfaller</skyFaller>
+            </li>
+        </modExtensions>
+    </VEF.Abilities.AbilityDef>
+
+    <!-- NEKONA - HAND FEED -->
+    <AbilityDef>
+        <defName>BEWH_NekonaHandFeed</defName>
+        <label>Hand feed</label>
+        <description>Nekona feeds a target colonist, instantly restoring their hunger. The target also gains a substantial mood buff. While under the effect, the colonist is immune to mental breaks and cannot enter a mental state.</description>
+        <cooldownTicksRange>30000</cooldownTicksRange>
+        <iconPath>UI/Abilities/BEWH_Ability_NekonaHandFeed</iconPath>
+        <jobDef>CastAbilityOnThingMelee</jobDef>
+        <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <targetRequired>true</targetRequired>
+        <showWhenDrafted>true</showWhenDrafted>
+        <hostile>false</hostile>
+
+        <verbProperties>
+            <verbClass>Verb_CastAbilityTouch</verbClass>
+            <range>-1</range>
+            <warmupTime>0.25</warmupTime>
+            <targetParams>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetAnimals>false</canTargetAnimals>
+                <canTargetMechs>false</canTargetMechs>
+                <canTargetBloodfeeders>false</canTargetBloodfeeders>
+                <canTargetCorpses>false</canTargetCorpses>
+            </targetParams>
+			<soundCast>BEWH_SFX_HandFeed</soundCast>
+        </verbProperties>
+        <comps>
+            <li Class="NyanDark40k.CompProperties_AbilityHandFeed" />
+        </comps>
+    </AbilityDef>
+
+</Defs>

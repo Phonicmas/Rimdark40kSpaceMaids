@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<HairDef>
+	    <defName>NekonaHair</defName>
+		<label>Nekona</label>
+		<texPath>Things/Hair/BEWH_NekonaHair</texPath>
+		<styleGender>Female</styleGender>
+		<overrideShaderTypeDef>CutoutComplex</overrideShaderTypeDef>
+		<category>Misc</category>
+	</HairDef>
+
+</Defs>

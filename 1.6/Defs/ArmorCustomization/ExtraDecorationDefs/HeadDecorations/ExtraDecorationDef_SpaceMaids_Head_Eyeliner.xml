@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- Eyeliner MkVII-->
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_DecoEyeliner_MkVII</defName>
+        <label>Sacred mascara</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/Headgear/BEWH_Deco_Eyeliner_icon</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_MkVIIEyeliner</drawnTextureIconPath>
+        <drawSize>(0.5, 0.5)</drawSize>
+        <sortOrder>2.2</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>West</li>
+            <li>South</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmorHelmet</li>
+        </appliesTo>
+        <drawData>
+            <dataSouth>
+                <layer>75</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>71</layer>
+            </dataEast>
+            <dataWest>
+                <layer>71</layer>
+            </dataWest>
+        </drawData>
+        <colourable>false</colourable>
+        <shaderType>Cutout</shaderType>
+        <useArmorColourAsDefault>true</useArmorColourAsDefault>
+    </Core40k.ExtraDecorationDef>
+
+    <!-- Eyeliner MkX-->
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_DecoEyeliner_MkX</defName>
+        <label>Sacred mascara</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/Headgear/BEWH_Deco_Eyeliner_icon</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_MkXEyeliner</drawnTextureIconPath>
+        <drawSize>(0.5, 0.5)</drawSize>
+        <sortOrder>2.2</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>West</li>
+            <li>South</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkXPowerArmorHelmet</li>
+        </appliesTo>
+        <drawData>
+            <dataSouth>
+                <layer>75</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>71</layer>
+            </dataEast>
+            <dataWest>
+                <layer>71</layer>
+            </dataWest>
+        </drawData>
+        <colourable>false</colourable>
+        <shaderType>Cutout</shaderType>
+        <useArmorColourAsDefault>true</useArmorColourAsDefault>
+    </Core40k.ExtraDecorationDef>
+
+    <!-- Eyeliner Chaplain -->
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_DecoEyelinerChaplain</defName>
+        <label>Sacred mascara</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/Headgear/BEWH_Deco_Eyeliner_icon</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/MkXC/BEWH_Deco_ChaplainEyeliner</drawnTextureIconPath>
+        <drawSize>(0.5, 0.5)</drawSize>
+        <sortOrder>2.2</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>West</li>
+            <li>South</li>
+            <li>East</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkXPowerArmorChaplainHelmet</li>
+        </appliesTo>
+        <drawData>
+            <dataSouth>
+                <layer>75</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>71</layer>
+            </dataEast>
+            <dataWest>
+                <layer>71</layer>
+            </dataWest>
+        </drawData>
+        <colourable>false</colourable>
+        <shaderType>Cutout</shaderType>
+    </Core40k.ExtraDecorationDef>
+</Defs>

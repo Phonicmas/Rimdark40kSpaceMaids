@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Firstborn -->
+    <RecipeDef ParentName="BEWH_FirstbornVialInsertion">
+        <defName>BEWH_MakeFirstbornChapterSpaceMaids</defName>
+        <label>make Space Maid firstborn</label>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
+                <geneseedVial>BEWH_GeneseedVialFirstborn</geneseedVial>
+                <geneFromMaterial>BEWH_ChapterSpaceMaids</geneFromMaterial>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+    <!-- Primaris -->
+    <RecipeDef ParentName="BEWH_PrimarisVialInsertion">
+        <defName>BEWH_MakePrimarisChapterSpaceMaids</defName>
+        <label>make Space Maid primaris</label>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_GeneseedVialRecipe">
+                <geneseedVial>BEWH_GeneseedVialPrimaris</geneseedVial>
+                <geneFromMaterial>BEWH_ChapterSpaceMaids</geneFromMaterial>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+
+    <!-- Legion Material Creation -->
+    <RecipeDef ParentName="BEWH_LegionMaterialCreationFromOther">
+        <defName>BEWH_MakeSpaceMaidsLegionMaterial</defName>
+        <label>make Space Maid chapter material</label>
+        <description>Make Space Maid chapter material.</description>
+        <jobString>Making Space Maid chapter material.</jobString>
+        <displayPriority>100</displayPriority>
+        <products>
+            <BEWH_ChapterMaterialSpaceMaids>1</BEWH_ChapterMaterialSpaceMaids>
+        </products>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_LegionMaterialCreation">
+                <requiredLegionMaterial>BEWH_ChapterMaterialSpaceMaids</requiredLegionMaterial>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+
+    <!-- Space Maids Legion -->
+    <RecipeDef ParentName="BEWH_LegionlessToLegion">
+        <defName>BEWH_IntroduceMaterialChapterSpaceMaids</defName>
+        <label>implant Space Maid material</label>
+        <modExtensions>
+            <li Class="Genes40k.DefModExtension_LegionMaterialCreation">
+                <requiredLegionMaterial>BEWH_ChapterMaterialSpaceMaids</requiredLegionMaterial>
+            </li>
+        </modExtensions>
+    </RecipeDef>
+
+</Defs>

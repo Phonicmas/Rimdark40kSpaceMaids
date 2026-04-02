@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- Nekona's Armor -->
+    <ThingDef ParentName="BEWH_PowerArmorBase">
+        <defName>BEWH_NekonaPowerArmor</defName>
+        <label>Armor of Nekona</label>
+        <description>Forged to the exact specifications of the First Space Maid herself. This primarch armor is a fortress, a statement, and a warning all at once. It is the only suit of power armor to be decorated with a bow that large. Nekona insisted on the bow.</description>
+        <recipeMaker>
+            <researchPrerequisite>BEWH_PowerArmorMkVII</researchPrerequisite>
+        </recipeMaker>
+        <graphicData>
+            <texPath>Things/Armor/NekonaArmor/BEWH_NekonaPowerArmor</texPath>
+        </graphicData>
+        <statBases>
+            <WorkToMake>98000</WorkToMake>
+            <MarketValue>12000</MarketValue>
+
+            <ArmorRating_Sharp>1.85</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.95</ArmorRating_Blunt>
+            <ArmorRating_Heat>1.3</ArmorRating_Heat>
+
+            <Insulation_Cold>50</Insulation_Cold>
+            <Insulation_Heat>50</Insulation_Heat>
+            <Beauty>7</Beauty>
+        </statBases>
+        <equippedStatOffsets>
+            <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.75</VacuumResistance>
+        </equippedStatOffsets>
+        <costList>
+            <ComponentSpacer>10</ComponentSpacer>
+            <Plasteel>200</Plasteel>
+            <Uranium>70</Uranium>
+            <Gold>20</Gold>
+            <Cloth>60</Cloth>
+        </costList>
+        <apparel>
+            <bodyPartGroups>
+                <li>FullHead</li>
+            </bodyPartGroups>
+            <renderSkipFlags>
+                <li>None</li>
+            </renderSkipFlags>
+            <wornGraphicPath>Things/Armor/NekonaArmor/BEWH_NekonaPowerArmor</wornGraphicPath>
+            <tags>
+                <li>BEWH_NekonaPowerArmor</li>
+            </tags>
+            <drawData>
+                <scale>1.15</scale>
+            </drawData>
+            <renderNodeProperties>
+                <!-- Backpacks -->
+                <li>
+                    <workerClass>Core40k.PawnRenderNodeWorker_AttachmentBackpack</workerClass>
+                    <nodeClass>Core40k.PawnRenderNode_AttachmentBackpack</nodeClass>
+                    <texPath>Things/Armor/NekonaArmor/Backpacks/BEWH_NekonaPowerArmor_Backpack</texPath>
+                    <shaderTypeDef>Cutout</shaderTypeDef>
+                    <parentTagDef>Body</parentTagDef>
+                    <drawData>
+                        <scale>1.15</scale>
+                        <dataNorth>
+                            <layer>99.6</layer>
+                        </dataNorth>
+                    </drawData>
+                </li>
+                <!-- Shoulder pad -->
+                <li>
+                    <workerClass>Core40k.PawnRenderNodeWorker_AttachmentShoulderPad</workerClass>
+                    <nodeClass>Core40k.PawnRenderNode_AttachmentApparelMultiColor</nodeClass>
+                    <texPath>Things/Armor/NekonaArmor/Shoulder/BEWH_NekonaPowerArmor_Shoulder</texPath>
+                    <shaderTypeDef>Cutout</shaderTypeDef>
+                    <parentTagDef>Body</parentTagDef>
+                    <drawData>
+                        <scale>1.15</scale>
+                        <dataEast>
+                            <layer>72</layer>
+                        </dataEast>
+                        <dataWest>
+                            <layer>72</layer>
+                        </dataWest>
+                    </drawData>
+                </li>
+            </renderNodeProperties>
+        </apparel>
+        <comps>
+            <li Class="Genes40k.CompProperties_ChapterColorWithShoulderDecoration" />
+        </comps>
+        <modExtensions>
+            <li Class="Core40k.DefModExtension_ForcesBodyType">
+                <forcedBodyType>Hulk</forcedBodyType>
+                <hideBodyGraphic>true</hideBodyGraphic>
+            </li>
+            <li Class="Core40k.DefModExtension_HideJumpPack" />
+        </modExtensions>
+    </ThingDef>
+
+</Defs>

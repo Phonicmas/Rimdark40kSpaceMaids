@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <Genes40k.ShoulderIconDef ParentName="BEWH_RankShoulderIcon">
+        <defName>BEWH_RankIcon_MaidsBattleSibling</defName>
+        <label>Battle Sibling</label>
+        <description>Battle Sibling rank icon</description>
+        <iconPath>UI/Ranks/BEWH_Server</iconPath>
+        <drawnTextureIconPath>Things/ShoulderIcons/RankIcons/BEWH_ShoulderRankServer</drawnTextureIconPath>
+        <sortOrder>90</sortOrder>
+        <useColour>true</useColour>        <!-- This allows player to colour their icons-->
+        <defaultColour>(187,84,119)</defaultColour>        <!-- This sets the default colour of the icon (Defaults to white if null) -->
+        <mustHaveRank>
+            <li>BEWH_SpaceMaidsBattleSibling</li>
+        </mustHaveRank>
+    </Genes40k.ShoulderIconDef>
+
+    <Genes40k.ShoulderIconDef ParentName="BEWH_RankShoulderIcon">
+        <defName>BEWH_RankIcon_MaidsCafeCutie</defName>
+        <label>Cafe Cutie</label>
+        <description>Cafe Cutie rank icon</description>
+        <iconPath>UI/Ranks/BEWH_CafeCutie</iconPath>
+        <drawnTextureIconPath>Things/ShoulderIcons/RankIcons/BEWH_ShoulderRankCCutie</drawnTextureIconPath>
+        <sortOrder>91</sortOrder>
+        <useColour>false</useColour>
+        <mustHaveRank>
+            <li>BEWH_SpaceMaidsCafeCutie</li>
+        </mustHaveRank>
+    </Genes40k.ShoulderIconDef>
+
+    <Genes40k.ShoulderIconDef ParentName="BEWH_RankShoulderIcon">
+        <defName>BEWH_RankIcon_MaidsHousekeeper</defName>
+        <label>Housekeeper</label>
+        <description>Housekeeper rank icon</description>
+        <iconPath>UI/Ranks/BEWH_HouseKeeper</iconPath>
+        <drawnTextureIconPath>Things/ShoulderIcons/RankIcons/BEWH_ShoulderRankHKeeper</drawnTextureIconPath>
+        <sortOrder>92</sortOrder>
+        <useColour>true</useColour>
+        <defaultColour>(187,84,119)</defaultColour>
+        <mustHaveRank>
+            <li>BEWH_SpaceMaidsHousekeeper</li>
+        </mustHaveRank>
+    </Genes40k.ShoulderIconDef>
+
+    <Genes40k.ShoulderIconDef ParentName="BEWH_RankShoulderIcon">
+        <defName>BEWH_RankIcon_MaidsSousChef</defName>
+        <label>Sous-chef</label>
+        <description>Sous Chef rank icon</description>
+        <iconPath>UI/Ranks/BEWH_SousChef</iconPath>
+        <drawnTextureIconPath>Things/ShoulderIcons/RankIcons/BEWH_ShoulderRankSChef</drawnTextureIconPath>
+        <sortOrder>93</sortOrder>
+        <useColour>true</useColour>
+        <defaultColour>(187,84,119)</defaultColour>
+        <mustHaveRank>
+            <li>BEWH_SpaceMaidsSousChef</li>
+        </mustHaveRank>
+    </Genes40k.ShoulderIconDef>
+
+    <Genes40k.ShoulderIconDef ParentName="BEWH_RankShoulderIcon">
+        <defName>BEWH_RankIcon_Manager</defName>
+        <label>Manager</label>
+        <description>Manager rank icon</description>
+        <iconPath>UI/Ranks/BEWH_Manager</iconPath>
+        <drawnTextureIconPath>Things/ShoulderIcons/RankIcons/BEWH_ShoulderRankManager</drawnTextureIconPath>
+        <sortOrder>94</sortOrder>
+        <useColour>true</useColour>
+        <defaultColour>(252, 196, 139)</defaultColour>
+        <mustHaveRank>
+            <li>BEWH_SpaceMaidsManager</li>
+        </mustHaveRank>
+    </Genes40k.ShoulderIconDef>
+
+    <Genes40k.ShoulderIconDef ParentName="BEWH_RankShoulderIcon">
+        <defName>BEWH_RankIcon_CafeMaster</defName>
+        <label>Cafe Master</label>
+        <description>Cafe Master rank icon</description>
+        <iconPath>UI/Ranks/BEWH_CafeMaster</iconPath>
+        <drawnTextureIconPath>Things/ShoulderIcons/RankIcons/BEWH_ShoulderRankCMaster</drawnTextureIconPath>
+        <sortOrder>95</sortOrder>
+        <useColour>true</useColour>
+        <defaultColour>(187,84,119)</defaultColour>
+        <mustHaveRank>
+            <li>BEWH_SpaceMaidsCafeMaster</li>
+        </mustHaveRank>
+    </Genes40k.ShoulderIconDef>
+
+</Defs>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- Cat Ears -->
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_DecoCatEars</defName>
+        <label>Cat ears</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/Headgear/BEWH_Deco_Ears_icon</iconPath>
+        <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_Ears</drawnTextureIconPath>
+        <drawSize>(0.5, 0.5)</drawSize>
+        <sortOrder>2.1</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>West</li>
+            <li>South</li>
+            <li>East</li>
+            <li>North</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkVIIPowerArmorHelmet</li>
+            <li>BEWH_MkXPowerArmorHelmet</li>
+        </appliesTo>
+        <drawData>
+            <dataNorth>
+                <layer>76</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>77</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>75</layer>
+            </dataEast>
+            <dataWest>
+                <layer>75</layer>
+            </dataWest>
+        </drawData>
+        <colourable>true</colourable>
+        <shaderType>Cutout</shaderType>
+        <useArmorColourAsDefault>true</useArmorColourAsDefault>
+    </Core40k.ExtraDecorationDef>
+
+    <!-- Cat Ears Chaplain -->
+    <Core40k.ExtraDecorationDef>
+        <defName>BEWH_DecoCatEarsChaplain</defName>
+        <label>Cat ears</label>
+        <description>...</description>
+        <iconPath>UI/Decoration/Icons/Headgear/BEWH_Deco_Ears_icon</iconPath> <!-- placeholder -->
+        <drawnTextureIconPath>Things/Decorations/Headgear/MkXC/BEWH_Deco_ChaplainEars</drawnTextureIconPath>
+        <drawSize>(0.5, 0.5)</drawSize>
+        <sortOrder>2.1</sortOrder>
+        <isHelmetDecoration>true</isHelmetDecoration>
+        <defaultShowRotation>
+            <li>West</li>
+            <li>South</li>
+            <li>East</li>
+            <li>North</li>
+        </defaultShowRotation>
+        <appliesTo>
+            <li>BEWH_MkXPowerArmorChaplainHelmet</li>
+        </appliesTo>
+        <drawData>
+            <dataNorth>
+                <layer>76</layer>
+            </dataNorth>
+            <dataSouth>
+                <layer>83</layer>
+            </dataSouth>
+            <dataEast>
+                <layer>75</layer>
+            </dataEast>
+            <dataWest>
+                <layer>75</layer>
+            </dataWest>
+        </drawData>
+        <colourable>false</colourable>
+        <shaderType>Cutout</shaderType>
+    </Core40k.ExtraDecorationDef>
+</Defs>

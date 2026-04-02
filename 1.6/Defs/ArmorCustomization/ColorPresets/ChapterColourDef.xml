@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Default colours of the Space Maids -->
+    <Genes40k.ChapterColourDef ParentName="BEWH_ChapterColourPresets">
+        <defName>BEWH_ChapterColourSpaceMaids</defName>
+        <label>Space Maids</label>
+        <colorAmount>3</colorAmount>
+        <primaryColour>(249, 132, 184)</primaryColour>
+        <secondaryColour>(252, 196, 139)</secondaryColour>
+        <tertiaryColour>(255, 223, 233)</tertiaryColour>
+        <relatedChapterGene>BEWH_ChapterSpaceMaids</relatedChapterGene>
+        <relatedChapterIcon>BEWH_LegionIconSpaceMaids</relatedChapterIcon>
+    </Genes40k.ChapterColourDef>
+
+</Defs>

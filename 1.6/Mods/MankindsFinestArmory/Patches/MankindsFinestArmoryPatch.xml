@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="BEWH_AstartesBoltPistol"]/comps/li[@Class="Core40k.CompProperties_AmmoChanger"]/availableProjectiles</xpath>
+        <value>
+            <li>BEWH_BolterRoundMacaron</li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="BEWH_AstartesBoltCarbine"]/comps/li[@Class="Core40k.CompProperties_AmmoChanger"]/availableProjectiles</xpath>
+        <value>
+            <li>BEWH_BolterRoundMacaron</li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="BEWH_AstartesBoltCarbine_Oculus"]/comps/li[@Class="Core40k.CompProperties_AmmoChanger"]/availableProjectiles</xpath>
+        <value>
+            <li>BEWH_BolterRoundMacaron</li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="BEWH_AstartesBoltRifle_Stalker"]/comps/li[@Class="Core40k.CompProperties_AmmoChanger"]/availableProjectiles</xpath>
+        <value>
+            <li>BEWH_BolterRoundMacaron</li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="BEWH_AstartesPowerFist"]/modExtensions/li[@Class="Core40k.DefModExtension_AvailableDrawerTabDefs"]/tabDefs/li[text()="BEWH_WeaponAlternateBaseForms"]</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="BEWH_AstartesPowerFist"]/modExtensions/li[@Class="Core40k.DefModExtension_AvailableDrawerTabDefs"]/tabDefs</xpath>
+            <value>
+                <li>BEWH_WeaponAlternateBaseForms</li>
+            </value>
+        </nomatch>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="BEWH_AstartesPowerMaul"]/modExtensions/li[@Class="Core40k.DefModExtension_AvailableDrawerTabDefs"]/tabDefs/li[text()="BEWH_WeaponAlternateBaseForms"]</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="BEWH_AstartesPowerMaul"]/modExtensions/li[@Class="Core40k.DefModExtension_AvailableDrawerTabDefs"]/tabDefs</xpath>
+            <value>
+                <li>BEWH_WeaponAlternateBaseForms</li>
+            </value>
+        </nomatch>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="BEWH_AstartesThunderhammer"]/modExtensions/li[@Class="Core40k.DefModExtension_AvailableDrawerTabDefs"]/tabDefs/li[text()="BEWH_WeaponAlternateBaseForms"]</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="BEWH_AstartesThunderhammer"]/modExtensions/li[@Class="Core40k.DefModExtension_AvailableDrawerTabDefs"]/tabDefs</xpath>
+            <value>
+                <li>BEWH_WeaponAlternateBaseForms</li>
+            </value>
+        </nomatch>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">        <!-- Add Maids palette preset for Armory weapons -->
+        <xpath>Defs/Genes40k.ChapterColourDef[defName="BEWH_WeaponColourSpaceMaids"]/appliesTo</xpath>
+        <value>
+            <li>BEWH_AstartesKnife</li>
+            <li>BEWH_AstartesPowerSword_Judiciar</li>
+            <li>BEWH_AstartesPowerAxe</li>
+            <li>BEWH_AstartesPowerMaul</li>
+            <li>BEWH_AstartesChainAxe</li>
+            <li>BEWH_AstartesThunderhammer</li>
+            <li>BEWH_AstartesPowerFist</li>
+            <li>BEWH_AstartesLightningClaws</li>
+            <li>BEWH_AstartesBoltPistol</li>
+            <li>BEWH_AstartesBoltCarbine</li>
+            <li>BEWH_AstartesBoltCarbine_Oculus</li>
+            <li>BEWH_AstartesBoltRifle_Stalker</li>
+            <li>BEWH_AstartesBoltPistol_Heavy</li>
+            <li>BEWH_AstartesBoltRifle_Heavy</li>
+            <li>BEWH_AstartesBoltRifle_Sniper</li>
+            <li>BEWH_AstartesPlasmaPistol</li>
+            <li>BEWH_AstartesPlasmaIncinerator</li>
+        </value>
+    </Operation>
+
+</Patch>
