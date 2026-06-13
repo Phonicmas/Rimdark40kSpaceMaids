@@ -10,7 +10,7 @@
         <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_Heart</drawnTextureIconPath>
         <drawSize>(0.125, 0.125)</drawSize>
         <sortOrder>0</sortOrder>
-        <isHelmetDecoration>true</isHelmetDecoration>
+        
         <defaultShowRotation>
             <li>West</li>
             <li>South</li>
@@ -52,7 +52,7 @@
         <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_Star</drawnTextureIconPath>
         <drawSize>(0.13, 0.13)</drawSize>
         <sortOrder>0</sortOrder>
-        <isHelmetDecoration>true</isHelmetDecoration>
+        
         <defaultShowRotation>
             <li>West</li>
             <li>South</li>

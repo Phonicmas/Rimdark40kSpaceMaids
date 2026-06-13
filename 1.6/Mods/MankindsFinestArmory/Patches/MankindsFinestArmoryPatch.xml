@@ -29,6 +29,7 @@
         </value>
     </Operation>
 
+
     <Operation Class="PatchOperationConditional">
         <xpath>Defs/ThingDef[defName="BEWH_AstartesPowerFist"]/modExtensions/li[@Class="Core40k.DefModExtension_AvailableDrawerTabDefs"]/tabDefs/li[text()="BEWH_WeaponAlternateBaseForms"]</xpath>
         <nomatch Class="PatchOperationAdd">
@@ -38,6 +39,16 @@
             </value>
         </nomatch>
     </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="BEWH_AstartesPowerFist"]/comps/li[@Class="Core40k.CompProperties_AlternateTexture"]</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="BEWH_AstartesPowerFist"]/comps</xpath>
+            <value>
+                <li Class="Core40k.CompProperties_AlternateTexture" />
+            </value>
+        </nomatch>
+    </Operation>
+
 
     <Operation Class="PatchOperationConditional">
         <xpath>Defs/ThingDef[defName="BEWH_AstartesPowerMaul"]/modExtensions/li[@Class="Core40k.DefModExtension_AvailableDrawerTabDefs"]/tabDefs/li[text()="BEWH_WeaponAlternateBaseForms"]</xpath>
@@ -48,6 +59,16 @@
             </value>
         </nomatch>
     </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="BEWH_AstartesPowerMaul"]/comps/li[@Class="Core40k.CompProperties_AlternateTexture"]</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="BEWH_AstartesPowerMaul"]/comps</xpath>
+            <value>
+                <li Class="Core40k.CompProperties_AlternateTexture" />
+            </value>
+        </nomatch>
+    </Operation>
+
 
     <Operation Class="PatchOperationConditional">
         <xpath>Defs/ThingDef[defName="BEWH_AstartesThunderhammer"]/modExtensions/li[@Class="Core40k.DefModExtension_AvailableDrawerTabDefs"]/tabDefs/li[text()="BEWH_WeaponAlternateBaseForms"]</xpath>
@@ -58,6 +79,16 @@
             </value>
         </nomatch>
     </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="BEWH_AstartesThunderhammer"]/comps/li[@Class="Core40k.CompProperties_AlternateTexture"]</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="BEWH_AstartesThunderhammer"]/comps</xpath>
+            <value>
+                <li Class="Core40k.CompProperties_AlternateTexture" />
+            </value>
+        </nomatch>
+    </Operation>
+
 
     <Operation Class="PatchOperationAdd">        <!-- Add Maids palette preset for Armory weapons -->
         <xpath>Defs/Genes40k.ChapterColourDef[defName="BEWH_WeaponColourSpaceMaids"]/appliesTo</xpath>
