@@ -10,7 +10,7 @@
         <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_EarBell</drawnTextureIconPath>
         <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>10</sortOrder>
-        
+
         <defaultShowRotation>
             <li>West</li>
             <li>South</li>
@@ -34,6 +34,7 @@
         </drawData>
         <colourable>false</colourable>
         <shaderType>Cutout</shaderType>
+        <decorationType>BEWH_DecoCategory_Misc</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -44,7 +45,7 @@
         <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_EarBellBows</drawnTextureIconPath>
         <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>10</sortOrder>
-        
+
         <defaultShowRotation>
             <li>West</li>
             <li>South</li>
@@ -76,6 +77,7 @@
             <li>BEWH_DecoPalettePink_2</li>
             <li>BEWH_DecoPaletteGoldPastel</li>
         </availablePresets>
+        <decorationType>BEWH_DecoCategory_Misc</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <!-- Bonnet -->
@@ -87,7 +89,7 @@
         <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_Bonnet</drawnTextureIconPath>
         <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>11</sortOrder>
-        
+
         <defaultShowRotation>
             <li>West</li>
             <li>South</li>
@@ -125,6 +127,7 @@
         <colourable>true</colourable>
         <shaderType>Cutout</shaderType>
         <defaultColour>(255, 237, 251)</defaultColour>
+        <decorationType>BEWH_DecoCategory_Fabrics</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <!-- Head bow -->
@@ -136,7 +139,7 @@
         <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_HeadBow</drawnTextureIconPath>
         <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>11</sortOrder>
-        
+
         <defaultShowRotation>
             <li>West</li>
             <li>South</li>
@@ -166,5 +169,6 @@
             <li>BEWH_DecoPalettePink_2</li>
             <li>BEWH_DecoPaletteGoldPastel</li>
         </availablePresets>
+        <decorationType>BEWH_DecoCategory_Fabrics</decorationType>
     </Core40k.ExtraDecorationDef>
 </Defs>

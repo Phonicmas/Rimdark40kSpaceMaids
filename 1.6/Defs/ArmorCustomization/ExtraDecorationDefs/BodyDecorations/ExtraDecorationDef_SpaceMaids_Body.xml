@@ -7,7 +7,7 @@
         <defName>BEWH_Deco_Apron</defName>
         <label>Apron</label>
         <description>...</description>
-        <iconPath>UI/Decoration/Icons/Armor/BEWH_Deco_Apron_icon</iconPath> 
+        <iconPath>UI/Decoration/Icons/Armor/BEWH_Deco_Apron_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_Apron</drawnTextureIconPath>
         <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>2.13</sortOrder>
@@ -49,6 +49,7 @@
         <useMask>true</useMask>
         <defaultColour>(255, 237, 251)</defaultColour>
         <defaultColourTwo>(202, 90, 132)</defaultColourTwo>
+        <decorationType>BEWH_DecoCategory_Fabrics</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.MaskDef ParentName="BEWH_MaskDef_ExtraDecoration">
@@ -82,7 +83,7 @@
         <defName>BEWH_Deco_Skirt</defName>
         <label>Skirt</label>
         <description>...</description>
-        <iconPath>UI/Decoration/Icons/Armor/BEWH_Deco_Skirt_icon</iconPath> 
+        <iconPath>UI/Decoration/Icons/Armor/BEWH_Deco_Skirt_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_Skirt</drawnTextureIconPath>
         <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>2.14</sortOrder>
@@ -123,6 +124,7 @@
         <colourable>true</colourable>
         <useMask>true</useMask>
         <defaultColour>(249, 132, 184)</defaultColour>
+        <decorationType>BEWH_DecoCategory_Fabrics</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <!-- Belt Bow -->
@@ -130,7 +132,7 @@
         <defName>BEWH_Deco_BeltBow_Common</defName>
         <label>Belt bow</label>
         <description>...</description>
-        <iconPath>UI/Decoration/Icons/Armor/BEWH_Deco_BeltBow_icon</iconPath> 
+        <iconPath>UI/Decoration/Icons/Armor/BEWH_Deco_BeltBow_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_BeltBow</drawnTextureIconPath>
         <drawSize>(0.25, 0.25)</drawSize>
         <sortOrder>2.15</sortOrder>
@@ -172,13 +174,14 @@
         <colorAmount>2</colorAmount>
         <defaultColour>(202, 90, 132)</defaultColour>
         <defaultColourTwo>(252, 196, 139)</defaultColourTwo>
+        <decorationType>BEWH_DecoCategory_Fabrics</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
         <defName>BEWH_Deco_BeltBow_Chaplain</defName>
         <label>Belt bow</label>
         <description>...</description>
-        <iconPath>UI/Decoration/Icons/Armor/BEWH_Deco_BeltBow_icon</iconPath> 
+        <iconPath>UI/Decoration/Icons/Armor/BEWH_Deco_BeltBow_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_BeltBow</drawnTextureIconPath>
         <drawSize>(0.25, 0.25)</drawSize>
         <sortOrder>2.15</sortOrder>
@@ -220,6 +223,7 @@
         <colorAmount>2</colorAmount>
         <defaultColour>(202, 90, 132)</defaultColour>
         <defaultColourTwo>(252, 196, 139)</defaultColourTwo>
+        <decorationType>BEWH_DecoCategory_Fabrics</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <!-- Backpack Bow -->
@@ -227,7 +231,7 @@
         <defName>BEWH_Deco_BackpackBow</defName>
         <label>Backpack bow</label>
         <description>...</description>
-        <iconPath>UI/Decoration/Icons/Armor/BEWH_Deco_BPackBow_icon</iconPath> 
+        <iconPath>UI/Decoration/Icons/Armor/BEWH_Deco_BPackBow_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_BPackBow</drawnTextureIconPath>
         <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>2.15</sortOrder>
@@ -269,6 +273,7 @@
         <colourable>true</colourable>
         <useMask>true</useMask>
         <defaultColour>(255, 237, 251)</defaultColour>
+        <decorationType>BEWH_DecoCategory_Fabrics</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <!-- Chest Neko -->
@@ -276,7 +281,7 @@
         <defName>BEWH_Deco_ChestNeko</defName>
         <label>Nekuilla</label>
         <description>...</description>
-        <iconPath>UI/Decoration/Icons/Armor/BEWH_Deco_ChestNeko_icon</iconPath> 
+        <iconPath>UI/Decoration/Icons/Armor/BEWH_Deco_ChestNeko_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_ChestNeko</drawnTextureIconPath>
         <drawSize>(0.25, 0.25)</drawSize>
         <sortOrder>2.15</sortOrder>
@@ -311,6 +316,7 @@
         </availablePresets>
         <colourable>true</colourable>
         <defaultColour>(252, 196, 139)</defaultColour>
+        <decorationType>BEWH_DecoCategory_Insignia</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <!-- Pauldron Bows 1 -->
@@ -318,7 +324,7 @@
         <defName>BEWH_Deco_PauldronBows_1</defName>
         <label>Pauldron bows</label>
         <description>...</description>
-        <iconPath>UI/Decoration/Icons/Armor/BEWH_Deco_PauldronBows1_icon</iconPath> 
+        <iconPath>UI/Decoration/Icons/Armor/BEWH_Deco_PauldronBows1_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_PauldronBows1</drawnTextureIconPath>
         <drawSize>(1, 1)</drawSize>
         <sortOrder>2.16</sortOrder>
@@ -355,6 +361,7 @@
         </availablePresets>
         <colourable>true</colourable>
         <defaultColour>(202, 90, 132)</defaultColour>
+        <decorationType>BEWH_DecoCategory_Shoulder</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <!-- Pauldron Bows 2 -->
@@ -362,7 +369,7 @@
         <defName>BEWH_Deco_PauldronBows_2</defName>
         <label>Cat bells</label>
         <description>...</description>
-        <iconPath>UI/Decoration/Icons/Armor/BEWH_Deco_PauldronBows2_icon</iconPath> 
+        <iconPath>UI/Decoration/Icons/Armor/BEWH_Deco_PauldronBows2_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_PauldronBows2</drawnTextureIconPath>
         <drawSize>(1, 1)</drawSize>
         <sortOrder>2.17</sortOrder>
@@ -400,6 +407,7 @@
         <colourable>true</colourable>
         <useMask>true</useMask>
         <defaultColour>(255, 237, 251)</defaultColour>
+        <decorationType>BEWH_DecoCategory_Shoulder</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <!-- Pauldron Ruffles -->
@@ -407,7 +415,7 @@
         <defName>BEWH_Deco_PauldronRuffles</defName>
         <label>Pauldron ruffles</label>
         <description>...</description>
-        <iconPath>UI/Decoration/Icons/Armor/BEWH_Deco_PauldronRuffles_icon</iconPath> 
+        <iconPath>UI/Decoration/Icons/Armor/BEWH_Deco_PauldronRuffles_icon</iconPath>
         <drawnTextureIconPath>Things/Decorations/Armor/Common/BEWH_Deco_PauldronRuffles</drawnTextureIconPath>
         <drawSize>(1, 1)</drawSize>
         <sortOrder>2.18</sortOrder>
@@ -444,6 +452,7 @@
         </availablePresets>
         <colourable>true</colourable>
         <defaultColour>(255, 237, 251)</defaultColour>
+        <decorationType>BEWH_DecoCategory_Shoulder</decorationType>
     </Core40k.ExtraDecorationDef>
 
 </Defs>

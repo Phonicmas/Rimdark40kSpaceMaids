@@ -10,7 +10,7 @@
         <drawnTextureIconPath>Things/Decorations/Headgear/MkVII/BEWH_Deco_MkVIIEyeliner</drawnTextureIconPath>
         <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>2.2</sortOrder>
-        
+
         <defaultShowRotation>
             <li>West</li>
             <li>South</li>
@@ -33,6 +33,7 @@
         <colourable>false</colourable>
         <shaderType>Cutout</shaderType>
         <useParentColourAsDefault>true</useParentColourAsDefault>
+        <decorationType>BEWH_DecoCategory_Misc</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <!-- Eyeliner MkX-->
@@ -44,7 +45,7 @@
         <drawnTextureIconPath>Things/Decorations/Headgear/MkX/BEWH_Deco_MkXEyeliner</drawnTextureIconPath>
         <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>2.2</sortOrder>
-        
+
         <defaultShowRotation>
             <li>West</li>
             <li>South</li>
@@ -67,6 +68,7 @@
         <colourable>false</colourable>
         <shaderType>Cutout</shaderType>
         <useParentColourAsDefault>true</useParentColourAsDefault>
+        <decorationType>BEWH_DecoCategory_Misc</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <!-- Eyeliner Chaplain -->
@@ -78,7 +80,7 @@
         <drawnTextureIconPath>Things/Decorations/Headgear/MkXC/BEWH_Deco_ChaplainEyeliner</drawnTextureIconPath>
         <drawSize>(0.5, 0.5)</drawSize>
         <sortOrder>2.2</sortOrder>
-        
+
         <defaultShowRotation>
             <li>West</li>
             <li>South</li>
@@ -100,5 +102,6 @@
         </drawData>
         <colourable>false</colourable>
         <shaderType>Cutout</shaderType>
+        <decorationType>BEWH_DecoCategory_Misc</decorationType>
     </Core40k.ExtraDecorationDef>
 </Defs>

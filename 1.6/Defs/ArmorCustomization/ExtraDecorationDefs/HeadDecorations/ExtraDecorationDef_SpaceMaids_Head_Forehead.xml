@@ -10,7 +10,7 @@
         <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_Heart</drawnTextureIconPath>
         <drawSize>(0.125, 0.125)</drawSize>
         <sortOrder>0</sortOrder>
-        
+
         <defaultShowRotation>
             <li>West</li>
             <li>South</li>
@@ -42,6 +42,7 @@
             <li>BEWH_DecoPalettePink_2</li>
             <li>BEWH_DecoPaletteGoldPastel</li>
         </availablePresets>
+        <decorationType>BEWH_DecoCategory_Insignia</decorationType>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -52,7 +53,7 @@
         <drawnTextureIconPath>Things/Decorations/Headgear/Common/BEWH_Deco_Star</drawnTextureIconPath>
         <drawSize>(0.13, 0.13)</drawSize>
         <sortOrder>0</sortOrder>
-        
+
         <defaultShowRotation>
             <li>West</li>
             <li>South</li>
@@ -84,6 +85,7 @@
             <li>BEWH_DecoPalettePink_2</li>
             <li>BEWH_DecoPaletteGoldPastel</li>
         </availablePresets>
+        <decorationType>BEWH_DecoCategory_Insignia</decorationType>
     </Core40k.ExtraDecorationDef>
 
 </Defs>
