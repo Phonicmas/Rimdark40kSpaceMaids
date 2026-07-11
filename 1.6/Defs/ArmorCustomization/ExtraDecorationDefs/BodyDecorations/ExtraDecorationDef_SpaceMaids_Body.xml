@@ -46,7 +46,6 @@
             <li>BEWH_DecoPaletteGoldPastel</li>
         </availablePresets>
         <colourable>true</colourable>
-        <useMask>true</useMask>
         <defaultColour>(255, 237, 251)</defaultColour>
         <defaultColourTwo>(202, 90, 132)</defaultColourTwo>
         <decorationType>BEWH_DecoCategory_Fabrics</decorationType>
@@ -122,7 +121,6 @@
             <li>BEWH_DecoPaletteGoldPastel</li>
         </availablePresets>
         <colourable>true</colourable>
-        <useMask>true</useMask>
         <defaultColour>(249, 132, 184)</defaultColour>
         <decorationType>BEWH_DecoCategory_Fabrics</decorationType>
     </Core40k.ExtraDecorationDef>
@@ -170,7 +168,6 @@
             <li>BEWH_DecoPaletteGoldPastel</li>
         </availablePresets>
         <colourable>true</colourable>
-        <useMask>true</useMask>
         <colorAmount>2</colorAmount>
         <defaultColour>(202, 90, 132)</defaultColour>
         <defaultColourTwo>(252, 196, 139)</defaultColourTwo>
@@ -219,7 +216,6 @@
             <li>BEWH_DecoPaletteIFBlack</li>
         </availablePresets>
         <colourable>true</colourable>
-        <useMask>true</useMask>
         <colorAmount>2</colorAmount>
         <defaultColour>(202, 90, 132)</defaultColour>
         <defaultColourTwo>(252, 196, 139)</defaultColourTwo>
@@ -271,7 +267,6 @@
             <li>BEWH_DecoPaletteGoldPastel</li>
         </availablePresets>
         <colourable>true</colourable>
-        <useMask>true</useMask>
         <defaultColour>(255, 237, 251)</defaultColour>
         <decorationType>BEWH_DecoCategory_Fabrics</decorationType>
     </Core40k.ExtraDecorationDef>
@@ -405,7 +400,6 @@
             <li>BEWH_DecoPaletteGoldPastel</li>
         </availablePresets>
         <colourable>true</colourable>
-        <useMask>true</useMask>
         <defaultColour>(255, 237, 251)</defaultColour>
         <decorationType>BEWH_DecoCategory_Shoulder</decorationType>
     </Core40k.ExtraDecorationDef>

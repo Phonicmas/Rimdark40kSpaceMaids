@@ -69,7 +69,6 @@
         </drawData>
         <colourable>true</colourable>
         <shaderType>CutoutComplex</shaderType>
-        <useMask>true</useMask>
         <colorAmount>1</colorAmount>
         <defaultColour>(255, 237, 251)</defaultColour>
         <availablePresets>
