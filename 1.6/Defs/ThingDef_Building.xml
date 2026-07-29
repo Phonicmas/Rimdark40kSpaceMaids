@@ -103,4 +103,56 @@
         </comps>
     </ThingDef>
 
+    <!-- Menu Standard -->
+    <ThingDef ParentName="FurnitureBase">
+    <defName>BEWH_MaidsStandard</defName>
+    <label>Space Maids Standard</label>
+    <description>A beautifully embroidered banner bearing the heraldry of the Space Maids legion. Crafted from stain-resistant fabric, it is expected to remain spotless regardless of battlefield conditions. After all, no amount of bloodshed excuses poor housekeeping.</description>
+    <designationCategory Inherit="False">BEWH_RimDarkCategory</designationCategory>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <researchPrerequisites>
+      <li>ComplexFurniture</li>
+    </researchPrerequisites>
+    <passability>PassThroughOnly</passability>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <fillPercent>0.40</fillPercent>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <WorkToBuild>4000</WorkToBuild>
+      <Mass>15</Mass>
+      <Flammability>0.5</Flammability>
+      <Beauty>7</Beauty>
+    </statBases>
+    <costList>
+      <WoodLog>25</WoodLog>
+      <Gold>2</Gold>
+      <Cloth>30</Cloth>
+    </costList>
+    <canOverlapZones>false</canOverlapZones>
+    <pathCost>35</pathCost>
+    <rotatable>true</rotatable>
+    <size>(1,1)</size>
+    <uiIconScale>0.45</uiIconScale>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <building>
+      <destroySound>BuildingDestroyed_Soft_Medium</destroySound>
+      <destroyShakeAmount>0</destroyShakeAmount>
+    </building>
+    <graphicData>
+      <drawSize>(2.5, 2.5)</drawSize>
+      <drawOffset>(0, 0, 0.7)</drawOffset>
+      <texPath>Things/Building/BEWH_DecorationMenuBanner</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>Cutout</shaderType>
+      <addTopAltitudeBias>true</addTopAltitudeBias>
+      <shadowData>
+		<volume>(1,0.6,0.3)</volume>
+		<offset>(0,0,0)</offset>
+	  </shadowData>
+    </graphicData>
+  </ThingDef>
+
 </Defs>

@@ -15,7 +15,7 @@
         <defName>BEWH_DecoPalettePink_2</defName>
         <label>Delicate Rose</label>
         <colour>(255, 237, 251)</colour>  <!-- rgb(255, 237, 251) -->
-        <colourTwo>(255, 237, 251)</colourTwo>
+        <colourTwo>(252, 196, 139)</colourTwo>
         <colourThree>(255, 237, 251)</colourThree>
     </Core40k.DecorationColourPresetDef>
     
@@ -24,7 +24,7 @@
         <defName>BEWH_DecoPaletteGoldPastel</defName>
         <label>Pastel Gold</label>
         <colour>(252, 196, 139)</colour>
-        <colourTwo>(252, 196, 139)</colourTwo>
+        <colourTwo>(227, 72, 141)</colourTwo>
         <colourThree>(252, 196, 139)</colourThree>
     </Core40k.DecorationColourPresetDef>
 
