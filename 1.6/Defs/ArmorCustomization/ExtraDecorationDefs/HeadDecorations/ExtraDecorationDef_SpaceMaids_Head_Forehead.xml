@@ -43,6 +43,13 @@
             <li>BEWH_DecoPaletteGoldPastel</li>
         </availablePresets>
         <decorationType>BEWH_DecoCategory_Insignia</decorationType>
+        <incompatibleDecorations>
+            <li>BEWH_DecoForeheadStar</li>
+            <li>BEWH_DecoInquisInsignia</li>
+            <li>BEWH_Deco_MkVIIApothecarySymbol</li>
+            <li>BEWH_Deco_MkXApothecarySymbol</li>
+            <li>BEWH_DecoSkull</li>
+        </incompatibleDecorations>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
@@ -86,6 +93,12 @@
             <li>BEWH_DecoPaletteGoldPastel</li>
         </availablePresets>
         <decorationType>BEWH_DecoCategory_Insignia</decorationType>
+        <incompatibleDecorations>
+            <li>BEWH_DecoInquisInsignia</li>
+            <li>BEWH_Deco_MkVIIApothecarySymbol</li>
+            <li>BEWH_Deco_MkXApothecarySymbol</li>
+            <li>BEWH_DecoSkull</li>
+        </incompatibleDecorations>
     </Core40k.ExtraDecorationDef>
 
 </Defs>

@@ -35,6 +35,9 @@
         <colourable>false</colourable>
         <shaderType>Cutout</shaderType>
         <decorationType>BEWH_DecoCategory_Misc</decorationType>
+        <incompatibleDecorations>
+            <li>BEWH_DecoCatBells_2</li>
+        </incompatibleDecorations>
     </Core40k.ExtraDecorationDef>
 
     <Core40k.ExtraDecorationDef>
