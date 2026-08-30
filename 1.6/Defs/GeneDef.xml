@@ -130,7 +130,7 @@
         <renderNodeProperties>
             <li>
                 <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
-                <workerClass>NyanDark40k.PawnRenderNodeWorker_HeadCovered</workerClass>
+                <workerClass>Core40k.PawnRenderNodeWorker_HeadCovered</workerClass>
                 <texPath>Things/Pawn/Humanlike/HeadAttachments/CatEars/CatEars</texPath>
                 <colorType>Hair</colorType>
                 <parentTagDef>Head</parentTagDef>

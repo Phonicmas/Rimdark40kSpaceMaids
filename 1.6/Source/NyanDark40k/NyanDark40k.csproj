@@ -71,7 +71,6 @@
         <Compile Include="Need_Servitile.cs" />
         <Compile Include="NyanDark40kDefOf.cs" />
         <Compile Include="NyanDark40kMod.cs" />
-        <Compile Include="PawnRenderNodeWorker_LivingSaintAttachmentBody.cs" />
         <Compile Include="PicnicProjectile.cs" />
         <Compile Include="Properties\AssemblyInfo.cs"/>
         <Compile Include="ThoughtNekonaFeed.cs" />

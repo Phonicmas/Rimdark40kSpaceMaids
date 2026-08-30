@@ -23,8 +23,6 @@ public static class NyanDark40kDefOf
     public static ThingDef BEWH_Cattuccino;
     public static ThingDef BEWH_Omurice;
     
-    public static BodyPartGroupDef UpperHead;
-    
     static NyanDark40kDefOf()
     {
         DefOfHelper.EnsureInitializedInCtor(typeof(NyanDark40kDefOf));
