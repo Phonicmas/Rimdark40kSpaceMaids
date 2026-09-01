@@ -23,6 +23,8 @@
             <Insulation_Cold>50</Insulation_Cold>
             <Insulation_Heat>50</Insulation_Heat>
             <Beauty>7</Beauty>
+
+            <BEWH_InternalUpgradeSlots>7</BEWH_InternalUpgradeSlots>
         </statBases>
         <equippedStatOffsets>
             <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.75</VacuumResistance>
