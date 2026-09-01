@@ -21,6 +21,7 @@
         <modExtensions>
             <li Class="Genes40k.DefModExtension_ChapterGene">
                 <chapterName>Space Maids</chapterName>
+                <relatedPrimarchGene>BEWH_PrimarchSpecificGeneSpaceMaids</relatedPrimarchGene>
             </li>
             <li Class="NyanDark40k.DefModExtension_ServitileNeedFill">
                 <jobDefs>
