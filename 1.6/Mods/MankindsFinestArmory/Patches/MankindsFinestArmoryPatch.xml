@@ -29,16 +29,6 @@
         </value>
     </Operation>
 
-
-    <Operation Class="PatchOperationConditional">
-        <xpath>Defs/ThingDef[defName="BEWH_AstartesPowerFist"]/modExtensions/li[@Class="Core40k.DefModExtension_AvailableDrawerTabDefs"]/tabDefs/li[text()="BEWH_WeaponAlternateBaseForms"]</xpath>
-        <nomatch Class="PatchOperationAdd">
-            <xpath>Defs/ThingDef[defName="BEWH_AstartesPowerFist"]/modExtensions/li[@Class="Core40k.DefModExtension_AvailableDrawerTabDefs"]/tabDefs</xpath>
-            <value>
-                <li>BEWH_WeaponAlternateBaseForms</li>
-            </value>
-        </nomatch>
-    </Operation>
     <Operation Class="PatchOperationConditional">
         <xpath>Defs/ThingDef[defName="BEWH_AstartesPowerFist"]/comps/li[@Class="Core40k.CompProperties_AlternateTexture"]</xpath>
         <nomatch Class="PatchOperationAdd">
@@ -49,16 +39,6 @@
         </nomatch>
     </Operation>
 
-
-    <Operation Class="PatchOperationConditional">
-        <xpath>Defs/ThingDef[defName="BEWH_AstartesPowerMaul"]/modExtensions/li[@Class="Core40k.DefModExtension_AvailableDrawerTabDefs"]/tabDefs/li[text()="BEWH_WeaponAlternateBaseForms"]</xpath>
-        <nomatch Class="PatchOperationAdd">
-            <xpath>Defs/ThingDef[defName="BEWH_AstartesPowerMaul"]/modExtensions/li[@Class="Core40k.DefModExtension_AvailableDrawerTabDefs"]/tabDefs</xpath>
-            <value>
-                <li>BEWH_WeaponAlternateBaseForms</li>
-            </value>
-        </nomatch>
-    </Operation>
     <Operation Class="PatchOperationConditional">
         <xpath>Defs/ThingDef[defName="BEWH_AstartesPowerMaul"]/comps/li[@Class="Core40k.CompProperties_AlternateTexture"]</xpath>
         <nomatch Class="PatchOperationAdd">
@@ -69,16 +49,6 @@
         </nomatch>
     </Operation>
 
-
-    <Operation Class="PatchOperationConditional">
-        <xpath>Defs/ThingDef[defName="BEWH_AstartesThunderhammer"]/modExtensions/li[@Class="Core40k.DefModExtension_AvailableDrawerTabDefs"]/tabDefs/li[text()="BEWH_WeaponAlternateBaseForms"]</xpath>
-        <nomatch Class="PatchOperationAdd">
-            <xpath>Defs/ThingDef[defName="BEWH_AstartesThunderhammer"]/modExtensions/li[@Class="Core40k.DefModExtension_AvailableDrawerTabDefs"]/tabDefs</xpath>
-            <value>
-                <li>BEWH_WeaponAlternateBaseForms</li>
-            </value>
-        </nomatch>
-    </Operation>
     <Operation Class="PatchOperationConditional">
         <xpath>Defs/ThingDef[defName="BEWH_AstartesThunderhammer"]/comps/li[@Class="Core40k.CompProperties_AlternateTexture"]</xpath>
         <nomatch Class="PatchOperationAdd">
