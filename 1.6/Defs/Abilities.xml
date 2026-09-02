@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
     <!-- Space Maid - Picnic Drop-->
@@ -17,7 +17,6 @@
             <li Class="Genes40k.DefModExtension_DropPod">
                 <chapterColour>BEWH_ChapterColourSpaceMaids</chapterColour>
                 <dropPodAmount>1</dropPodAmount>
-                <marinesToSpawn>1</marinesToSpawn>
                 <fromFaction>BEWH_OffworldMarinesFaction</fromFaction>
                 <innerThing>BEWH_SpaceMaidsDropPodBuilding</innerThing>
                 <skyFaller>BEWH_SpaceMaidsDropPodSkyfaller</skyFaller>

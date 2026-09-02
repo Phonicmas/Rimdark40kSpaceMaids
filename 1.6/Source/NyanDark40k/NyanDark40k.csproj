@@ -62,7 +62,7 @@
         <Compile Include="DefModExtension_IgnoreWorkTablePenalties.cs" />
         <Compile Include="DefModExtension_ServitileNeedFill.cs" />
         <Compile Include="Gene_SpaceMaidsServitile.cs" />
-        <Compile Include="HarmonyPatch_NekonaFeedStartMentalUndraft.cs" />
+        <Compile Include="HarmonyPatch_NekonaFeedResumeMentalBreak.cs" />
         <Compile Include="HarmonyPatch_NekonaFeedStopMentalBreak.cs" />
         <Compile Include="HarmonyPatch_NekonaFeedStopMentalState.cs" />
         <Compile Include="HarmonyPatch_ServitileNeedFromVarious.cs" />

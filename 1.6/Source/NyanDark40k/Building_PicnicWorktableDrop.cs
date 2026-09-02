@@ -4,25 +4,49 @@ using Genes40k;
 using RimWorld;
 using UnityEngine;
 using Verse;
-using Verse.AI.Group;
+using Verse.Sound;
 
 namespace NyanDark40k;
 
 public class Building_PicnicWorktableDrop : Building_WorkTable
 {
+    private const int TableCount = 5;
+
+    private const int SearchRadius = 10;
+
+    private const float PreferredTableSpacing = 5f;
+
+    private const float FallbackTableSpacing = 2f;
+
     private bool hasDoneThing;
-
-    private Lord lord;
-
-    private const string LeaveSignal = "BEWH_PicnicLeaveSignal";
 
     [Unsaved]
     private Graphic cachedOpenGraphic;
-        
-    private Graphic OpenGraphic =>
-        cachedOpenGraphic ??= GraphicDatabase.Get<Graphic_Single>(def.GetModExtension<DefModExtension_DropPod>().openGraphic, def.graphicData.shaderType.Shader,
-            def.graphicData.drawSize, DrawColor, Color.white, DefaultGraphic.data, def.GetModExtension<DefModExtension_DropPod>().openGraphicMask);
-        
+
+    private DefModExtension_DropPod DropPodExtension => def.GetModExtension<DefModExtension_DropPod>();
+
+    private Graphic OpenGraphic
+    {
+        get
+        {
+            if (cachedOpenGraphic != null)
+            {
+                return cachedOpenGraphic;
+            }
+
+            var extension = DropPodExtension;
+            if (extension?.openGraphic == null)
+            {
+                return DefaultGraphic;
+            }
+
+            cachedOpenGraphic = GraphicDatabase.Get<Graphic_Single>(extension.openGraphic, def.graphicData.shaderType.Shader,
+                def.graphicData.drawSize, DrawColor, Color.white, DefaultGraphic.data, extension.openGraphicMask);
+
+            return cachedOpenGraphic;
+        }
+    }
+
     public override Graphic Graphic => hasDoneThing ? OpenGraphic : DefaultGraphic;
 
     protected override void TickInterval(int delta)
@@ -32,7 +56,7 @@ public class Building_PicnicWorktableDrop : Building_WorkTable
         {
             return;
         }
-        
+
         hasDoneThing = true;
 
         OnDropPodOpen();
@@ -40,71 +64,67 @@ public class Building_PicnicWorktableDrop : Building_WorkTable
 
     protected virtual void OnDropPodOpen()
     {
-        var possibleCells = GenRadial.RadialCellsAround(Position, 10, useCenter: true)
-            .Where(c => c.InBounds(Map) && !c.Fogged(Map) && c.GetEdifice(Map) == null).ToList();
+        DropPodExtension?.openSound?.PlayOneShot(new TargetInfo(Position, Map));
 
-        var newPossibleCells = new List<IntVec3>();
-        
-        foreach (var cell in possibleCells)
-        {
-            var northLoc = new IntVec3(cell.x, cell.y, cell.z + 1);
-            var southLoc = new IntVec3(cell.x, cell.y, cell.z - 1);
-            var eastLoc = new IntVec3(cell.x + 1, cell.y, cell.z);
-            var westLoc = new IntVec3(cell.x - 1, cell.y, cell.z);
-            if (!northLoc.InBounds(Map) || northLoc.Fogged(Map) || northLoc.GetEdifice(Map) != null)
-            {
-                continue;
-            }
-            if (!southLoc.InBounds(Map) || southLoc.Fogged(Map) || southLoc.GetEdifice(Map) != null)
-            {
-                continue;
-            }
-            if (!eastLoc.InBounds(Map) || eastLoc.Fogged(Map) || eastLoc.GetEdifice(Map) != null)
-            {
-                continue;
-            }
-            if (!westLoc.InBounds(Map) || westLoc.Fogged(Map) || westLoc.GetEdifice(Map) != null)
-            {
-                continue;
-            }
-            newPossibleCells.Add(cell);
-        }
+        var possibleCells = GenRadial.RadialCellsAround(Position, SearchRadius, useCenter: true)
+            .Where(CellCanHoldTable).ToList();
 
-        if (newPossibleCells.Count <= 0)
+        foreach (var cell in SelectTableCells(possibleCells))
         {
-            return;
-        }
-        
-        var cellsToSpawn = new List<IntVec3>();
-        var initialCell = newPossibleCells.Where(c => c.GetEdifice(Map) == null).RandomElement();
-        
-        cellsToSpawn.Add(initialCell);
-        newPossibleCells.Remove(initialCell);
-        
-        for (var i = 0; i < 4; i++)
-        {
-            var spawnCell = newPossibleCells.Where(c => cellsToSpawn.All(c2 => c2.DistanceTo(c) > 5)).RandomElement();
-            cellsToSpawn.Add(spawnCell);
-            newPossibleCells.Remove(spawnCell);
-        }
-
-        foreach (var cell in cellsToSpawn)
-        {
-            var projectile = (Projectile)GenSpawn.Spawn(NyanDark40kDefOf.BEWH_PicnicProjectile, Position, Map);
-            projectile.Launch(this, Position.ToVector3(), cell, cell, ProjectileHitFlags.All, true);
+            var projectile = GenSpawn.Spawn(NyanDark40kDefOf.BEWH_PicnicProjectile, Position, Map) as Projectile;
+            projectile?.Launch(this, Position.ToVector3(), cell, cell, ProjectileHitFlags.All, true);
         }
     }
-    
-    public override void Destroy(DestroyMode mode = DestroyMode.Vanish)
+
+    /// <summary>
+    /// A table needs its own cell plus all four orthogonal neighbours, so the stools have somewhere to land.
+    /// </summary>
+    private bool CellCanHoldTable(IntVec3 cell)
     {
-        lord?.Notify_SignalReceived(new Signal(LeaveSignal));
-        base.Destroy(mode);
+        return CellIsFree(cell)
+               && CellIsFree(cell + IntVec3.North)
+               && CellIsFree(cell + IntVec3.South)
+               && CellIsFree(cell + IntVec3.East)
+               && CellIsFree(cell + IntVec3.West);
+    }
+
+    private bool CellIsFree(IntVec3 cell)
+    {
+        return cell.InBounds(Map) && !cell.Fogged(Map) && cell.GetEdifice(Map) == null;
+    }
+
+    /// <summary>
+    /// Picks up to TableCount spread out cells, relaxing the spacing rather than giving up when the area is cramped.
+    /// </summary>
+    private static List<IntVec3> SelectTableCells(List<IntVec3> possibleCells)
+    {
+        var cellsToSpawn = new List<IntVec3>();
+
+        while (cellsToSpawn.Count < TableCount && possibleCells.Count > 0)
+        {
+            var spacing = cellsToSpawn.Count <= 0 ? 0f : PreferredTableSpacing;
+
+            if (!TryPickCell(possibleCells, cellsToSpawn, spacing, out var cell)
+                && !TryPickCell(possibleCells, cellsToSpawn, FallbackTableSpacing, out cell))
+            {
+                break;
+            }
+
+            cellsToSpawn.Add(cell);
+            possibleCells.Remove(cell);
+        }
+
+        return cellsToSpawn;
+    }
+
+    private static bool TryPickCell(List<IntVec3> possibleCells, List<IntVec3> chosenCells, float minSpacing, out IntVec3 cell)
+    {
+        return possibleCells.Where(c => chosenCells.All(c2 => c2.DistanceTo(c) > minSpacing)).TryRandomElement(out cell);
     }
 
     public override void ExposeData()
     {
         base.ExposeData();
         Scribe_Values.Look(ref hasDoneThing, "hasSpawnedMarines");
-        Scribe_References.Look(ref lord, "lord");
     }
 }

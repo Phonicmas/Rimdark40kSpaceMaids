@@ -6,38 +6,60 @@ namespace NyanDark40k;
 
 public class PicnicProjectile : Projectile
 {
-    private List<ThingDef> SpaceMaidFood =
-        [
-            NyanDark40kDefOf.BEWH_BoltgunCookie, 
-            NyanDark40kDefOf.BEWH_Cattuccino, 
-            NyanDark40kDefOf.BEWH_Omurice
-        ];
-    
+    private static readonly IntVec3[] StoolOffsets =
+    [
+        IntVec3.North,
+        IntVec3.South,
+        IntVec3.East,
+        IntVec3.West,
+    ];
+
+    private static List<ThingDef> spaceMaidFood;
+
+    private static List<ThingDef> SpaceMaidFood => spaceMaidFood ??= new List<ThingDef>
+    {
+        NyanDark40kDefOf.BEWH_BoltgunCookie,
+        NyanDark40kDefOf.BEWH_Cattuccino,
+        NyanDark40kDefOf.BEWH_Omurice,
+    };
+
     protected override void Impact(Thing hitThing, bool blockedByShield = false)
     {
-        var table = GenSpawn.Spawn(NyanDark40kDefOf.BEWH_PicnicTableDropPod, Position, Map);
-        
-        table.SetFactionDirect(Faction.OfPlayer);
-        
-        GenSpawn.Spawn(SpaceMaidFood.RandomElement(), table.Position, Map);
-        
-        var stoolLoc = table.Position;
+        SpawnPicnic(Map, Position);
 
-        var northLoc = new IntVec3(stoolLoc.x, stoolLoc.y, stoolLoc.z + 1);
-        var southLoc = new IntVec3(stoolLoc.x, stoolLoc.y, stoolLoc.z - 1);
-        var eastLoc = new IntVec3(stoolLoc.x + 1, stoolLoc.y, stoolLoc.z);
-        var westLoc = new IntVec3(stoolLoc.x - 1, stoolLoc.y, stoolLoc.z);
-        
-        var stool1 = GenSpawn.Spawn(NyanDark40kDefOf.BEWH_PicnicStoolDropPod, northLoc, Map);
-        var stool2 = GenSpawn.Spawn(NyanDark40kDefOf.BEWH_PicnicStoolDropPod, southLoc, Map);
-        var stool3 = GenSpawn.Spawn(NyanDark40kDefOf.BEWH_PicnicStoolDropPod, eastLoc, Map);
-        var stool4 = GenSpawn.Spawn(NyanDark40kDefOf.BEWH_PicnicStoolDropPod, westLoc, Map);
-        
-        stool1.SetFactionDirect(Faction.OfPlayer);
-        stool2.SetFactionDirect(Faction.OfPlayer);
-        stool3.SetFactionDirect(Faction.OfPlayer);
-        stool4.SetFactionDirect(Faction.OfPlayer);
-        
         base.Impact(hitThing, blockedByShield);
+    }
+
+    /// <summary>
+    /// Spawns the table, a random dish and up to four stools, skipping any cell the map cannot take.
+    /// </summary>
+    private static void SpawnPicnic(Map map, IntVec3 position)
+    {
+        if (map == null || !position.InBounds(map))
+        {
+            return;
+        }
+
+        var table = GenSpawn.Spawn(NyanDark40kDefOf.BEWH_PicnicTableDropPod, position, map);
+        if (table == null)
+        {
+            return;
+        }
+
+        table.SetFactionDirect(Faction.OfPlayer);
+
+        GenSpawn.Spawn(SpaceMaidFood.RandomElement(), table.Position, map);
+
+        foreach (var offset in StoolOffsets)
+        {
+            var stoolLoc = table.Position + offset;
+            if (!stoolLoc.InBounds(map))
+            {
+                continue;
+            }
+
+            var stool = GenSpawn.Spawn(NyanDark40kDefOf.BEWH_PicnicStoolDropPod, stoolLoc, map);
+            stool?.SetFactionDirect(Faction.OfPlayer);
+        }
     }
 }

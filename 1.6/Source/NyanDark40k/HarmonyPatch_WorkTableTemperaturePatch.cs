@@ -17,6 +17,12 @@ public class HarmonyPatch_WorkTableTemperaturePatch
 {
     public static bool Prefix(ref bool __result, ThingDef tDef)
     {
-        return !tDef.HasModExtension<DefModExtension_IgnoreWorkTablePenalties>();
+        if (tDef == null || !tDef.HasModExtension<DefModExtension_IgnoreWorkTablePenalties>())
+        {
+            return true;
+        }
+
+        __result = false;
+        return false;
     }
 }

@@ -17,6 +17,12 @@ public class HarmonyPatch_WorkTableOutdoorPatch
 {
     public static bool Prefix(ref bool __result, ThingDef def)
     {
-        return !def.HasModExtension<DefModExtension_IgnoreWorkTablePenalties>();
+        if (def == null || !def.HasModExtension<DefModExtension_IgnoreWorkTablePenalties>())
+        {
+            return true;
+        }
+
+        __result = false;
+        return false;
     }
 }

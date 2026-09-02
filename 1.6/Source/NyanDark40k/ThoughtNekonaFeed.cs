@@ -21,6 +21,14 @@ public class ThoughtNekonaFeed : Thought_Memory
 
     private bool causedByPsycast;
 
+    /// <summary>
+    /// Cheap lookup of the hand fed memory, used by the patches that suppress mental breaks and states.
+    /// </summary>
+    public static ThoughtNekonaFeed ActiveOn(Pawn pawn)
+    {
+        return pawn?.needs?.mood?.thoughts?.memories?.GetFirstMemoryOfDef(NyanDark40kDefOf.BEWH_NekonaHandFed) as ThoughtNekonaFeed;
+    }
+
     public void SetMentalState(MentalStateDef stateDef, string reason = null, bool causedByMood = false, Pawn mentalOtherPawn = null, bool transitionSilently = false, bool causedByDamage = false, bool causedByPsycast = false)
     {
         this.reason = reason;
@@ -47,6 +55,12 @@ public class ThoughtNekonaFeed : Thought_Memory
 
     public void TryDoMentalBreak()
     {
+        if (pawn == null || pawn.Dead || pawn.Destroyed)
+        {
+            ResetData();
+            return;
+        }
+
         if (stateDef != null)
         {
             pawn.mindState.mentalStateHandler.TryStartMentalState(stateDef, reason, forced: false, forceWake: false, causedByMood: causedByMood, mentalOtherPawn, transitionSilently, causedByDamage, causedByPsycast);
